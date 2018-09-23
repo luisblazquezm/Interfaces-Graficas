@@ -9,5 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface Model : NSObject
+{
+    NSMutableArray *array;
+}
+
+-(float) addPromptNumber: (int) number;
+-(float) addPromptSymbol: (char) symbol;
+-(float) calculateOperation;
+
 
 @end
