@@ -11,6 +11,7 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        /*   //Ejercicio Parte 1
         NSPossesion *myPossesion;
         
         myPossesion = [[NSPossesion alloc] initWithPossesionName:@"Mesa roble" valueInEuros:1200 serialName:@"12129VW5"];
@@ -23,6 +24,17 @@ int main(int argc, const char * argv[]) {
               [myPossesion dateCreated]);
         
         NSLog(@"La posesión %@ \n\n", myPossesion);
+         */
+        
+                //Ejercicio Parte 2
+        NSMutableArray *items = [[NSMutableArray alloc] init];
+        for (int i = 0; i < 10; i++) {
+            [items addObject:[NSPossesion randomPosession]];
+        }
+        
+        for (NSPossesion *item in items) {
+            NSLog(@"%@", item);
+        }
     }
     return 0;
 }
