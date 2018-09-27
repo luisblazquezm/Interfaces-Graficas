@@ -1,14 +1,14 @@
 //
-//  NSPossesion.m
-//  Possesion
+//  Possesion.m
+//  PosessionGraphic_Interface
 //
-//  Created by alumno5 on 24/9/18.
-//  Copyright © 2018 USAL. All rights reserved.
+//  Created by Luis Blazquez Miñambres on 27/9/18.
+//  Copyright © 2018 Luis Blazquez Miñambres. All rights reserved.
 //
 
-#import "NSPossesion.h"
+#import "Possesion.h"
 
-@implementation NSPossesion
+@implementation Possesion
 @synthesize possesionName, serialNumber, valueInEuros, dateCreated;
 
 -(NSString *) description
@@ -16,7 +16,7 @@
     NSString *descriptionString;
     
     // Se rellenará los valores con lo que devuelva el getter de possesioName,...
-    descriptionString = [[NSString alloc] initWithFormat:@"%@ (%@): Precio €%d, Adquirido en %@",
+    descriptionString = [[NSString alloc] initWithFormat:@"%@ (%@): Precio €%d, Adquirido %@",
                          possesionName, serialNumber,
                          valueInEuros, dateCreated];
     
@@ -71,13 +71,13 @@
                                     (char)('A' + random() % 26),
                                     (char)('0' + random() % 10)];
     
-    NSPossesion *newPossesion = [[NSPossesion alloc]
+    Possesion *newPossesion = [[Possesion alloc]
                                  initWithPossesionName:randomName
                                  valueInEuros:randomValue
                                  serialName:randomSerialNumber];
     
+    
     return newPossesion;
 }
-
 
 @end
