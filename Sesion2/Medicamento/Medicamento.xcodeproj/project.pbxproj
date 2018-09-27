@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		29222DFB215AB35600350868 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29222DFA215AB35600350868 /* main.m */; };
+		294414AE215D4971007D0CBB /* Medicamento.m in Sources */ = {isa = PBXBuildFile; fileRef = 294414AD215D4971007D0CBB /* Medicamento.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		29222DF7215AB35600350868 /* Medicamento */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Medicamento; sourceTree = BUILT_PRODUCTS_DIR; };
 		29222DFA215AB35600350868 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		294414AC215D4971007D0CBB /* Medicamento.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Medicamento.h; sourceTree = "<group>"; };
+		294414AD215D4971007D0CBB /* Medicamento.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Medicamento.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				29222DFA215AB35600350868 /* main.m */,
+				294414AC215D4971007D0CBB /* Medicamento.h */,
+				294414AD215D4971007D0CBB /* Medicamento.m */,
 			);
 			path = Medicamento;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				294414AE215D4971007D0CBB /* Medicamento.m in Sources */,
 				29222DFB215AB35600350868 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

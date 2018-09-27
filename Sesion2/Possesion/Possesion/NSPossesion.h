@@ -20,12 +20,14 @@
 @property (nonatomic, copy) NSString *possesionName;
 @property (nonatomic, copy) NSString *serialNumber;
 @property (nonatomic) int valueInEuros;
-@property (readonly) NSDate *dateCreated;
+@property (readonly) NSDate *dateCreated;// readonly = solo getter
 
+// Inicializador = Constructor
 -(id) initWithPossesionName: (NSString *) aName
                valueInEuros: (int) value
                  serialName: (NSString *) sNumber;
 
+// Metodo de clase equivalente a un factoryMethod en JAVA
 +(id) randomPosession;
 
 @end

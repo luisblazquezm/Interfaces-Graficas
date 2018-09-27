@@ -7,11 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Medicamento.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        NSMutableArray *items = [[NSMutableArray alloc] init];
+        for (int i = 0; i < 10; i++) {
+            [items addObject:[Medicamento randomMedicine]];
+        }
+        
+        for (Medicamento *item in items) {
+            NSLog(@"%@\n", item);
+        }
     }
     return 0;
 }

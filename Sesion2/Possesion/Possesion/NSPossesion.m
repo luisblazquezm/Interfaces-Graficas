@@ -28,6 +28,8 @@
                valueInEuros: (int) value
                  serialName: (NSString *) sNumber
 {
+    
+    // Siempre invocar al inicializador del padre o superclase (NSObject)
     self = [super init];
     
     if(!self)
