@@ -57,17 +57,12 @@
     [salida setStringValue:title];
 }
 
--(IBAction)respuestaButton:(id)sender
-{
-    [sender setFloatValue:[sender floatValue]];
-}
-
 -(IBAction)respuestaSlider:(id)sender
 {
     float valor = [sender floatValue];
     
     [salida setFloatValue:valor];
-    [self respuestaButton:sender];
+    [rueda setFloatValue:valor];
     
 }
 
