@@ -14,14 +14,30 @@
 // envia una notificación del target al action
 // actualizando la longitud de la cadena en una unidad.
 
+-(IBAction)respuestaText:(NSNotification *)obj
+{
+    NSString *cadena = [entrada stringValue];
+    NSString *texto = [[NSString alloc] initWithFormat:@"La longitud de la cadena es %ld", [cadena length]];
+    
+    [salida setStringValue:texto];
+    [salida sizeToFit];
+    
+}
+
+// Metodo normal
+
+/*
 -(IBAction)respuestaText:(id)sender
 {
+    
     NSString *cadena = [sender stringValue];
     NSString *texto = [[NSString alloc] initWithFormat:@"La longitud de la cadena es %ld", [cadena length]];
     
     [salida setStringValue:texto];
     [salida sizeToFit];
+     
 }
+ */
 
 -(IBAction)respuestaButton:(id)sender
 {

@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface MisControlesController : NSObject
+@interface MisControlesController : NSObject <NSTextFieldDelegate>
 {
     IBOutlet NSTextField *entrada;
     IBOutlet NSSlider *slider;
