@@ -11,6 +11,7 @@
 		29AD284D2163E405005A19BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29AD284C2163E405005A19BC /* Assets.xcassets */; };
 		29AD28502163E405005A19BC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29AD284E2163E405005A19BC /* MainMenu.xib */; };
 		29AD28532163E405005A19BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29AD28522163E405005A19BC /* main.m */; };
+		29AD285C2163E51D005A19BC /* MisControlesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29AD285A2163E51D005A19BC /* MisControlesController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		29AD28512163E405005A19BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29AD28522163E405005A19BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29AD28542163E405005A19BC /* MisControles2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MisControles2.entitlements; sourceTree = "<group>"; };
+		29AD285A2163E51D005A19BC /* MisControlesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MisControlesController.m; sourceTree = "<group>"; };
+		29AD285B2163E51D005A19BC /* MisControlesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MisControlesController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,8 @@
 				29AD28512163E405005A19BC /* Info.plist */,
 				29AD28522163E405005A19BC /* main.m */,
 				29AD28542163E405005A19BC /* MisControles2.entitlements */,
+				29AD285B2163E51D005A19BC /* MisControlesController.h */,
+				29AD285A2163E51D005A19BC /* MisControlesController.m */,
 			);
 			path = MisControles2;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29AD285C2163E51D005A19BC /* MisControlesController.m in Sources */,
 				29AD28532163E405005A19BC /* main.m in Sources */,
 				29AD284B2163E404005A19BC /* AppDelegate.m in Sources */,
 			);
