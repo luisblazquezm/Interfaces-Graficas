@@ -27,6 +27,7 @@
     
 }
 
+/*
 -(NSSize)windowWillResize:(NSWindow *)sender
                    toSize:(NSSize)frameSize
 {
@@ -37,6 +38,29 @@
     newSize = frame.size;
     
     return newSize;
+    
+}
+*/
+
+-(IBAction)buttonAdd:(id)sender
+{
+    
+}
+
+-(IBAction)buttonDelete:(id)sender
+{
+    
+}
+
+// En cuanto el usuario meta un solo carácter, el boton añadir se hará visible
+-(IBAction)controlTextDidChange:(NSNotification *)obj;
+{
+    NSString *cadena = [textField stringValue];
+    if([cadena length] > 0)
+        [buttonAdd setEnabled:YES];
+    else
+        [buttonAdd setEnabled:NO];
+        
     
 }
 
