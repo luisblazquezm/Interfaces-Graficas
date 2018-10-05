@@ -34,5 +34,9 @@
 -(BOOL)windowShouldClose:(NSWindow *)sender;
 
 // Comportamiento diferentes voces
+-(id) tableView:(NSTableView *)tableView
+objectValueForTableColumn:(NSTableColumn *)tableColumn
+            row:(NSInteger)row;
+-(void) tableViewSelectionDidChange:(NSNotification *)notification;
 
 @end

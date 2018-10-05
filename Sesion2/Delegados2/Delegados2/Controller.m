@@ -93,7 +93,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 {
     NSString *v = [voices objectAtIndex:row];
     NSDictionary *dict = [NSSpeechSynthesizer attributesForVoice:v];
-    return [dict objectForKey:NSVoiceAge];
+    return [dict objectForKey:NSVoiceName];
 }
 
 -(void) tableViewSelectionDidChange:(NSNotification *)notification
