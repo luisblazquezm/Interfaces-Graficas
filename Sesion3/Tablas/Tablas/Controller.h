@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Model.h"
 
 @interface Controller : NSObject <NSWindowDelegate,
                                   NSTextFieldDelegate,
@@ -20,6 +21,7 @@
     IBOutlet NSTableView *aTableView;
     NSMutableArray *anArray;
     NSInteger aRowSelected;
+    Model *elModelo;
 }
 
     
