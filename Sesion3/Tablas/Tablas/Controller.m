@@ -15,7 +15,8 @@
     self = [super init];
     if (self){
         NSLog(@"En init");
-        anArray = [[NSMutableArray alloc] init];
+        anArrayLeft = [[NSMutableArray alloc] init];
+        anArrayRight = [[NSMutableArray alloc] init];
         elModelo = [[Model alloc] init];
     }
     
@@ -57,32 +58,81 @@
 -(IBAction)buttonAdd:(id)sender
 {
     NSString *cadena = [textField stringValue];
-    [anArray addObject:cadena];
+    [anArrayLeft addObject:cadena];
     NSLog(@"Cadena guardada en array: %@\r", cadena);
-    [aTableView reloadData];
+    [aTableViewLeft reloadData];
     
 }
 
 -(IBAction)buttonDelete:(id)sender
 {
-    aRowSelected = [aTableView selectedRow];
-    [aTableView abortEditing]; // Orden que deniega la edición al usuario (Es necesrio en el caso en el que el usuario intente editar un campo y pulse el botón eliminar (produce un bug)
-    if (aRowSelected == -1)
-        return;
+    if([sender tag] == -6){                                 // Tabla Izquierda
+        aRowSelectedLeft = [aTableViewLeft selectedRow];
+        [aTableViewLeft abortEditing]; // Orden que deniega la edición al usuario (Es necesrio en el caso en el que el usuario intente editar un campo y pulse el botón eliminar (produce un bug)
+        if (aRowSelectedLeft == -1)
+            return;
+        
+        [anArrayLeft removeObjectAtIndex:aRowSelectedLeft];
+        NSLog(@"Cadena eliminada en array en pos %ld\r", aRowSelectedLeft);
+        [aTableViewLeft reloadData];
+    } else {
+        aRowSelectedRight = [aTableViewRight selectedRow];
+        [aTableViewRight abortEditing]; // Orden que deniega la edición al usuario (Es necesrio en el caso en el que el usuario intente editar un campo y pulse el botón eliminar (produce un bug)
+        if (aRowSelectedRight == -1)
+            return;
+        
+        [anArrayRight removeObjectAtIndex:aRowSelectedRight];
+        NSLog(@"Cadena eliminada en array en pos %ld\r", aRowSelectedLeft);
+        [aTableViewLeft reloadData];
+    }
+}
+
+-(IBAction)buttonPass:(id)sender
+{
+    if([sender tag] == 1){                // Boton para pasar de Tabla Izquierda a tabla Derecha
+        aRowSelectedLeft = [aTableViewLeft selectedRow];
+        NSString *cadena = [anArrayLeft objectAtIndex:aRowSelectedLeft];
+        [anArrayLeft removeObjectAtIndex:aRowSelectedLeft];
+        [anArrayRight addObject:cadena];
+        NSLog(@"Cadena pasada de izquierda a derecha: %@\r", cadena);
+        [aTableViewLeft reloadData];
+        [aTableViewRight reloadData];
+    } else {                             // Boton para pasar de Tabla Derecha a tabla Izquierda
+        aRowSelectedRight = [aTableViewRight selectedRow];
+        NSString *cadena = [anArrayRight objectAtIndex:aRowSelectedRight];
+        [anArrayRight removeObjectAtIndex:aRowSelectedRight];
+        [anArrayLeft addObject:cadena];
+        NSLog(@"Cadena pasada de derecha a izquierda: %@\r", cadena);
+        [aTableViewLeft reloadData];
+        [aTableViewRight reloadData];
+    }
+        
     
-    [anArray removeObjectAtIndex:aRowSelected];
-    NSLog(@"Cadena eliminada en array en pos %ld\r", aRowSelected);
-    [aTableView reloadData];
 }
 
 // Si selecciona alguna fila, se habilita el botón eliminar. En caso contrario se deshabilita
 -(void) tableViewSelectionDidChange:(NSNotification *)notification
 {
-    aRowSelected = [aTableView selectedRow];
-    if(aRowSelected == -1)
-        [buttonDelete setEnabled:NO];
-    else
-        [buttonDelete setEnabled:YES];
+    aRowSelectedLeft = [aTableViewLeft selectedRow];
+    aRowSelectedRight = [aTableViewRight selectedRow];
+    
+
+    if (aRowSelectedLeft != -1 && aRowSelectedRight == -1){     // Fila seleccionada en la tabla Izquierda
+        [buttonDeleteLeft setEnabled:YES];
+        [buttonDeleteRight setEnabled:NO];
+        [buttonRight setEnabled:YES];
+        [buttonLeft setEnabled:NO];
+    } else if (aRowSelectedLeft == -1 && aRowSelectedRight != -1) {  // Fila seleccionada en la tabla Derecha
+        [buttonDeleteRight setEnabled:YES];
+        [buttonDeleteLeft setEnabled:NO];
+        [buttonLeft setEnabled:YES];
+        [buttonRight setEnabled:NO];
+    } else {                                                    // Fila no Seleccionada
+        [buttonDeleteLeft setEnabled:NO];
+        [buttonDeleteRight setEnabled:NO];
+        [buttonLeft setEnabled:NO];
+        [buttonRight setEnabled:NO];
+    }
 }
 
 
@@ -91,9 +141,15 @@
 objectValueForTableColumn:(NSTableColumn *)tableColumn
             row:(NSInteger)row
 {
-    NSString *cadena = [anArray objectAtIndex:row];
-    NSLog(@"Fila %ld - Texto (%@)\r", row, cadena);
-    return cadena;
+    if([tableView tag] == -6){                                 // Tabla Izquierda
+        NSString *cadena = [anArrayLeft objectAtIndex:row];
+        NSLog(@"Fila %ld - Texto (%@)\r", row, cadena);
+        return cadena;
+    } else {                                                  // Tabla Derecha
+        NSString *cadena = [anArrayRight objectAtIndex:row];
+        NSLog(@"Fila %ld - Texto (%@)\r", row, cadena);
+        return cadena;
+    }
 }
 
 // Permite editar los campos de las filas de la tabla
@@ -102,15 +158,24 @@ setObjectValue:(nullable id)object
  forTableColumn:(nullable NSTableColumn *)tableColumn
             row:(NSInteger)row
 {
-    NSString *cadena = [anArray objectAtIndex:row];
-    [anArray setObject:object atIndexedSubscript:row];
-    NSLog(@"Texto Antiguo (%@) - Texto nuevo(%@)\r", cadena, object);
+    if([tableView tag] == -6){
+        NSString *cadena = [anArrayLeft objectAtIndex:row];
+        [anArrayLeft setObject:object atIndexedSubscript:row];
+        NSLog(@"Texto Antiguo (%@) - Texto nuevo(%@)\r", cadena, object);
+    } else {
+        NSString *cadena = [anArrayRight objectAtIndex:row];
+        [anArrayRight setObject:object atIndexedSubscript:row];
+        NSLog(@"Texto Antiguo (%@) - Texto nuevo(%@)\r", cadena, object);
+    }
 }
 
 // Devuelve el numero de columnas de la tabla
 -(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
 {
-    return [anArray count];
+    if([tableView tag] == -6) // Tabla Izquierda
+        return [anArrayLeft count];
+    else                      // Tabla Derecha
+        return [anArrayRight count];
 }
 
 // En cuanto el usuario meta un solo carácter, el boton añadir se hará visible

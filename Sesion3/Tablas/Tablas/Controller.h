@@ -16,11 +16,15 @@
                                   NSControlTextEditingDelegate>
 {
     IBOutlet NSTextField *textField;
-    IBOutlet NSButton *buttonDelete;
+    IBOutlet NSButton *buttonDeleteLeft;
+    IBOutlet NSButton *buttonDeleteRight;
     IBOutlet NSButton *buttonAdd;
-    IBOutlet NSTableView *aTableView;
-    NSMutableArray *anArray;
-    NSInteger aRowSelected;
+    IBOutlet NSButton *buttonLeft;
+    IBOutlet NSButton *buttonRight;
+    IBOutlet NSTableView *aTableViewLeft;
+    IBOutlet NSTableView *aTableViewRight;
+    NSMutableArray *anArrayLeft, *anArrayRight;
+    NSInteger aRowSelectedLeft, aRowSelectedRight;
     Model *elModelo;
 }
 
@@ -33,5 +37,6 @@
 
 -(IBAction)buttonAdd:(id)sender;
 -(IBAction)buttonDelete:(id)sender;
+-(IBAction)buttonPass:(id)sender;
 
 @end
