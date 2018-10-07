@@ -85,6 +85,7 @@
         NSLog(@"Cadena eliminada en array en pos %ld\r", aRowSelectedLeft);
         [aTableViewLeft reloadData];
     }
+    
 }
 
 -(IBAction)buttonPass:(id)sender
