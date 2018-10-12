@@ -28,6 +28,9 @@
     NSInteger aRowSelectedLeft, aRowSelectedRight;
     Model *elModelo;
     PanelWindowController *panelController;
+    
+    float width, height;
+    NSWindow *window;
 }
 
 // Comportamiento cierre ventana
@@ -39,5 +42,6 @@
 -(IBAction)buttonPass:(id)sender;
 
 -(IBAction)showPanel:(id)sender;
+-(void)handlePanelChange:(NSNotification*)aNotification;
 
 @end

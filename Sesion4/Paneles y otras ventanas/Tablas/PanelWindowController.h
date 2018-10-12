@@ -10,8 +10,10 @@
 
 @interface PanelWindowController : NSWindowController
 {
-    IBOutlet NSColorWell *colorWell;
-    IBOutlet NSButton *checkButton;
+    IBOutlet NSColorWell *colorWellLeft;
+    IBOutlet NSButton *checkButtonLeft;
+    IBOutlet NSColorWell *colorWellRight;
+    IBOutlet NSButton *checkButtonRight;
 }
 
 -(IBAction)changeTableColor:(id)sender;

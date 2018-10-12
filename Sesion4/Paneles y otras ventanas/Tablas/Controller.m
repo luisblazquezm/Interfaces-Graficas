@@ -12,15 +12,21 @@
 
 @implementation Controller
 
+extern NSString *PanelChangeTableNotification;
+
 -(id)init
 {
     self = [super init];
     if (self){
         NSLog(@"En init");
+        NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+        [nc addObserver:self
+               selector:@selector(handlePanelChange:)
+                   name:PanelChangeTableNotification
+                 object:nil];
         //anArrayLeft = [[NSMutableArray alloc] init];
         //anArrayRight = [[NSMutableArray alloc] init];
         elModelo = [[Model alloc] init];
-        //panelController = [[PanelWindowController alloc] init];
     }
     
     return self;
@@ -43,20 +49,6 @@
     
 }
 
-/*
--(NSSize)windowWillResize:(NSWindow *)sender
-                   toSize:(NSSize)frameSize
-{
-    NSRect frame = [sender frame];
-    NSSize newSize;
-    frame.origin.y += frame.size.height; // origin.y is top Y coordinate now
-    frame.origin.y -= frameSize.height; // new Y coordinate for the origin
-    newSize = frame.size;
-    
-    return newSize;
-    
-}
-*/
 
 -(IBAction)buttonAdd:(id)sender
 {
@@ -200,6 +192,44 @@ setObjectValue:(nullable id)object
     
     NSLog(@"panel %@\r", panelController);
     [panelController showWindow:self];
+}
+
+-(void)handlePanelChange:(NSNotification*)aNotification
+{
+    NSLog(@"Notificacion %@ recibida en handlePanelChange\r", aNotification);
+    NSDictionary *notificationInfo = [aNotification userInfo];
+    
+    NSColor *colorLeft = [notificationInfo objectForKey:@"tableLeftColor"];
+    NSNumber *numberStateLeft = [notificationInfo objectForKey:@"tableLeftState"];
+    NSColor *colorRight = [notificationInfo objectForKey:@"tableRightColor"];
+    NSNumber *numberStateRight = [notificationInfo objectForKey:@"tableRightState"];
+    
+    if (colorLeft != nil){
+        [aTableViewLeft setBackgroundColor:colorLeft];
+    }
+    
+    if (colorRight != nil){
+        [aTableViewRight setBackgroundColor:colorRight];
+    }
+    
+    if (numberStateLeft != nil){
+        aRowSelectedLeft = -1;
+        [aTableViewLeft deselectAll:self];
+        [aTableViewLeft setEnabled:[numberStateLeft integerValue]];
+    }
+    
+    if (numberStateRight != nil){
+        aRowSelectedRight = -1;
+        [aTableViewRight deselectAll:self];
+        [aTableViewRight setEnabled:[numberStateRight integerValue]];
+    }
+    
+}
+
+-(void)dealloc
+{
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc removeObserver:self];
 }
 
 @end

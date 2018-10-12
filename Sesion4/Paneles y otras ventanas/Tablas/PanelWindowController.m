@@ -8,11 +8,15 @@
 
 #import "PanelWindowController.h"
 
+
+
 @interface PanelWindowController ()
 
 @end
 
 @implementation PanelWindowController
+
+NSString *PanelChangeTableNotification = @"PanelChangeTable";
 
 -(id)init
 {
@@ -41,13 +45,35 @@
 
 -(void)changeTableColor:(id)sender
 {
-    NSColor *backgroundColorTable = [colorWell color];
-    NSLog(@"Color seleccionad: %@", backgroundColorTable);
+    NSColor *backgroundColorTableLeft = [colorWellLeft color];
+    NSColor *backgroundColorTableRight = [colorWellRight color];
+    NSLog(@"Color seleccionado Izquierda: %@", backgroundColorTableLeft);
+    NSLog(@"Color seleccionado Derecha: %@", backgroundColorTableRight);
+    NSDictionary *notificationInfo = [NSDictionary dictionaryWithObjectsAndKeys:backgroundColorTableLeft,@"tableLeftColor",
+                                     backgroundColorTableRight,@"tableRightColor",
+                                     nil];
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc postNotificationName:PanelChangeTableNotification
+                      object:self
+                    userInfo:notificationInfo];
 }
 
 -(void)activateTable:(id)sender
 {
-    NSInteger tableState = [checkButton state];
-    NSLog(@"Tabla activada: %ld", tableState);
+    NSNumber *tableStateLeft = [[NSNumber alloc] initWithInteger:[checkButtonLeft state]];
+    NSNumber *tableStateRight = [[NSNumber alloc] initWithInteger:[checkButtonRight state]];
+    NSLog(@"Tabla activada Izquierda: %@", tableStateLeft);
+    NSLog(@"Tabla activada Derecha: %@", tableStateRight);
+    NSDictionary *notificationInfo = [NSDictionary dictionaryWithObjectsAndKeys:tableStateLeft,@"tableLeftState",
+                                      tableStateRight,@"tableRightState",
+                                      nil];
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc postNotificationName:PanelChangeTableNotification
+                      object:self
+                    userInfo:notificationInfo];
 }
+
+
+
+
 @end
