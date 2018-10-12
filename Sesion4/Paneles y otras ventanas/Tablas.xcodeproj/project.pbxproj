@@ -15,6 +15,7 @@
 		2924624B216D2E0F0077B40D /* PanelWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29246249216D2E0F0077B40D /* PanelWindowController.m */; };
 		2924624C216D2E0F0077B40D /* PanelWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2924624A216D2E0F0077B40D /* PanelWindowController.xib */; };
 		293CEF4421688AA100F865DC /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 293CEF4321688AA100F865DC /* Model.m */; };
+		2944C7B62170B65E00563941 /* PanelWindowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2944C7B52170B65E00563941 /* PanelWindowModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		2924624A216D2E0F0077B40D /* PanelWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PanelWindowController.xib; sourceTree = "<group>"; };
 		293CEF4221688AA100F865DC /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		293CEF4321688AA100F865DC /* Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		2944C7B42170B65E00563941 /* PanelWindowModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PanelWindowModel.h; sourceTree = "<group>"; };
+		2944C7B52170B65E00563941 /* PanelWindowModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PanelWindowModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,8 @@
 				290152582167B3ED006E3623 /* Info.plist */,
 				290152592167B3ED006E3623 /* main.m */,
 				2901525B2167B3ED006E3623 /* Tablas.entitlements */,
+				2944C7B42170B65E00563941 /* PanelWindowModel.h */,
+				2944C7B52170B65E00563941 /* PanelWindowModel.m */,
 			);
 			path = Tablas;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2944C7B62170B65E00563941 /* PanelWindowModel.m in Sources */,
 				2901525A2167B3ED006E3623 /* main.m in Sources */,
 				2924624B216D2E0F0077B40D /* PanelWindowController.m in Sources */,
 				290152522167B3EB006E3623 /* AppDelegate.m in Sources */,

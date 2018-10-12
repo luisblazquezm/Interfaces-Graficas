@@ -226,6 +226,37 @@ setObjectValue:(nullable id)object
     
 }
 
+/* Tal y como lo tengo , cada vez que redimensiono la ventana, esta aumenta en altura y anchura 100 ptos*/
+ -(NSSize)windowWillResize:(NSWindow *)sender
+                    toSize:(NSSize)frameSize
+ {
+     /*
+ NSRect frame = [sender frame];
+ NSSize newSize;
+ frame.origin.y += frame.size.height; // origin.y is top Y coordinate now
+ frame.origin.y -= frameSize.height; // new Y coordinate for the origin
+ newSize = frame.size;
+ 
+ return newSize;
+  */
+     
+     NSRect frame = [sender frame];
+     NSSize newSize;
+     newSize.height = frame.size.height+100;
+     newSize.width = frame.size.width+100;
+
+     NSLog(@"Actual [Altura %f][Ancho %f] - Nuevo [Altura %f][Ancho %f]",frame.size.height,frame.size.width,newSize.height,newSize.width);
+     frame.origin.y -= frame.size.height; // remove the old height
+     frame.origin.y += newSize.height; // add the new height
+     frame.size = newSize;
+          
+     return newSize;
+  }
+  
+
+
+ 
+
 -(void)dealloc
 {
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];

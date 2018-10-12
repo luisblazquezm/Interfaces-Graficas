@@ -7,16 +7,27 @@
 //
 
 #import <Cocoa/Cocoa.h>
+@class PanelWindowModel;
 
-@interface PanelWindowController : NSWindowController
+@interface PanelWindowController : NSWindowController <NSWindowDelegate,
+                                                        NSTextFieldDelegate,
+                                                        NSTableViewDelegate,
+                                                        NSTableViewDataSource,
+                                                        NSControlTextEditingDelegate>
 {
     IBOutlet NSColorWell *colorWellLeft;
     IBOutlet NSButton *checkButtonLeft;
     IBOutlet NSColorWell *colorWellRight;
     IBOutlet NSButton *checkButtonRight;
+    IBOutlet NSTextField *field;
+    IBOutlet NSButton *addB;
+    IBOutlet NSTableView *aTableView;
+    PanelWindowModel *elPanelModelo;
 }
 
 -(IBAction)changeTableColor:(id)sender;
 -(IBAction)activateTable:(id)sender;
+-(IBAction)buttonAddPanel:(id)sender;
+-(IBAction)buttonDeletePanel:(id)sender;
 
 @end

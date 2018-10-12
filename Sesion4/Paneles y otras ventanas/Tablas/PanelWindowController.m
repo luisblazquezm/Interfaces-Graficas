@@ -7,7 +7,7 @@
 //
 
 #import "PanelWindowController.h"
-
+#import "PanelWindowModel.h"
 
 
 @interface PanelWindowController ()
@@ -30,7 +30,8 @@ NSString *PanelChangeTableNotification = @"PanelChangeTable";
 {
     self = [super initWithWindow:window];
     if (self){
-        //Inicialization code here
+        NSLog(@"En init Panel");
+        elPanelModelo = [[PanelWindowModel alloc] init];
     }
     
     return self;
@@ -71,6 +72,59 @@ NSString *PanelChangeTableNotification = @"PanelChangeTable";
     [nc postNotificationName:PanelChangeTableNotification
                       object:self
                     userInfo:notificationInfo];
+}
+
+-(IBAction)buttonAddPanel:(id)sender
+{
+    NSString *cadena = [field stringValue];
+    [[elPanelModelo anArray] addObject:cadena];
+    NSLog(@"Cadena guardada en array: %@\r", cadena);
+    [aTableView reloadData];
+    
+}
+
+-(IBAction)buttonDeletePanel:(id)sender
+{
+
+    
+}
+
+// Añade el contenido del array en la fila correspondiente de la tabla
+-(id) tableView:(NSTableView *)tableView
+objectValueForTableColumn:(NSTableColumn *)tableColumn
+            row:(NSInteger)row
+{
+        NSString *cadena = [[elPanelModelo anArray] objectAtIndex:row];
+        NSLog(@"PANEL: Fila %ld - Texto (%@)\r", row, cadena);
+        return cadena;
+}
+
+// Permite editar los campos de las filas de la tabla
+-(void) tableView:(NSTableView *)tableView
+   setObjectValue:(nullable id)object
+   forTableColumn:(nullable NSTableColumn *)tableColumn
+              row:(NSInteger)row
+{
+        NSString *cadena = [[elPanelModelo anArray] objectAtIndex:row];
+        [[elPanelModelo anArray] setObject:object atIndexedSubscript:row];
+        NSLog(@"PANEL: Texto Antiguo (%@) - Texto nuevo(%@)\r", cadena, object);
+}
+
+// Devuelve el numero de columnas de la tabla
+-(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
+{
+        return [[elPanelModelo anArray] count];
+}
+
+// En cuanto el usuario meta un solo carácter, el boton añadir se hará visible
+-(IBAction)controlTextDidChange:(NSNotification *)obj;
+{
+    NSString *cadena = [field stringValue];
+    if([cadena length] > 0)
+        [addB setEnabled:YES];
+    else
+        [addB setEnabled:NO];
+    
 }
 
 

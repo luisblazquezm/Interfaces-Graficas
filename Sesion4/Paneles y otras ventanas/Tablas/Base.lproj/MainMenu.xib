@@ -689,15 +689,16 @@
         <window title="Tablas" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="493" height="360"/>
+            <rect key="contentRect" x="335" y="390" width="493" height="347"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <value key="minSize" type="size" width="493" height="360"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="493" height="360"/>
+                <rect key="frame" x="0.0" y="0.0" width="493" height="347"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ihP-G6-Yap">
-                        <rect key="frame" x="20" y="307" width="365" height="22"/>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ihP-G6-Yap">
+                        <rect key="frame" x="20" y="294" width="365" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="z3s-6p-47b">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -707,8 +708,9 @@
                             <outlet property="delegate" destination="rtp-jq-Kd0" id="Rsb-SG-B0f"/>
                         </connections>
                     </textField>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rz9-V8-qjO">
-                        <rect key="frame" x="394" y="301" width="80" height="32"/>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rz9-V8-qjO">
+                        <rect key="frame" x="394" y="288" width="80" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Añadir" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EQQ-0t-uFH">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -719,7 +721,7 @@
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tf4-jm-hRL">
                         <rect key="frame" x="14" y="0.0" width="143" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Eliminar" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Wrd-s4-jvK">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -729,14 +731,14 @@
                         </connections>
                     </button>
                     <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mpk-Lv-zQu">
-                        <rect key="frame" x="20" y="37" width="181" height="252"/>
+                        <rect key="frame" x="20" y="37" width="181" height="239"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                         <clipView key="contentView" ambiguous="YES" id="Wcb-0q-phY">
-                            <rect key="frame" x="1" y="0.0" width="179" height="251"/>
+                            <rect key="frame" x="1" y="0.0" width="179" height="238"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView verticalHuggingPriority="750" tag="-6" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="uJN-eo-uX7" id="nXN-RR-0cQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="179" height="228"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="179" height="215"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -777,8 +779,9 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                     </scrollView>
-                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="gf5-w5-GdI">
-                        <rect key="frame" x="220" y="216" width="29" height="22"/>
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="gf5-w5-GdI">
+                        <rect key="frame" x="240" y="213" width="13" height="13"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="disclosureTriangle" bezelStyle="disclosure" image="buttonCell:dIU-e3-Y3e:image" imagePosition="only" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dIU-e3-Y3e">
                             <behavior key="behavior" pushIn="YES" changeBackground="YES" changeGray="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
@@ -788,14 +791,14 @@
                         </connections>
                     </button>
                     <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGj-x2-RlV">
-                        <rect key="frame" x="271" y="37" width="189" height="251"/>
+                        <rect key="frame" x="279" y="38" width="189" height="238"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" ambiguous="YES" id="iC1-XR-bSV">
-                            <rect key="frame" x="1" y="0.0" width="187" height="250"/>
+                            <rect key="frame" x="1" y="0.0" width="187" height="237"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView verticalHuggingPriority="750" tag="-5" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="Vi6-JP-RTn" id="VQT-51-yFE">
-                                    <rect key="frame" x="0.0" y="0.0" width="187" height="227"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="187" height="214"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -835,19 +838,9 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                     </scrollView>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JGy-xH-Ul0">
-                        <rect key="frame" x="265" y="0.0" width="146" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
-                        <buttonCell key="cell" type="push" title="Eliminar" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FWS-BD-SkW">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="buttonDelete:" target="rtp-jq-Kd0" id="o9d-4O-AWb"/>
-                        </connections>
-                    </button>
-                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" tag="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BUq-9P-jjo">
-                        <rect key="frame" x="220" y="167" width="29" height="25"/>
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" tag="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BUq-9P-jjo">
+                        <rect key="frame" x="240" y="167" width="13" height="13"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="disclosureTriangle" bezelStyle="disclosure" imagePosition="overlaps" alignment="left" enabled="NO" borderStyle="border" userInterfaceLayoutDirection="rightToLeft" imageScaling="proportionallyDown" inset="2" id="gLB-si-kz0">
                             <behavior key="behavior" pushIn="YES" changeBackground="YES" changeGray="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
@@ -856,14 +849,18 @@
                             <action selector="buttonPass:" target="rtp-jq-Kd0" id="aha-85-tdA"/>
                         </connections>
                     </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JGy-xH-Ul0">
+                        <rect key="frame" x="273" y="0.0" width="146" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES"/>
+                        <buttonCell key="cell" type="push" title="Eliminar" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FWS-BD-SkW">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="buttonDelete:" target="rtp-jq-Kd0" id="o9d-4O-AWb"/>
+                        </connections>
+                    </button>
                 </subviews>
-                <constraints>
-                    <constraint firstItem="gf5-w5-GdI" firstAttribute="centerX" secondItem="BUq-9P-jjo" secondAttribute="centerX" id="CjA-Nf-HPm"/>
-                    <constraint firstAttribute="trailing" secondItem="rz9-V8-qjO" secondAttribute="trailing" constant="25" id="bDj-hg-mon"/>
-                    <constraint firstItem="rz9-V8-qjO" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="31" id="cKM-j7-ViN"/>
-                    <constraint firstItem="rz9-V8-qjO" firstAttribute="leading" secondItem="ihP-G6-Yap" secondAttribute="trailing" constant="15" id="vVL-HR-TQp"/>
-                    <constraint firstItem="ihP-G6-Yap" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="zdO-Xd-xnB"/>
-                </constraints>
             </view>
             <connections>
                 <outlet property="delegate" destination="rtp-jq-Kd0" id="Xe4-iq-TGm"/>
