@@ -7,28 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29282974217A140F005FAFDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 29282973217A140F005FAFDE /* AppDelegate.m */; };
-		29282976217A1410005FAFDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29282975217A1410005FAFDE /* Assets.xcassets */; };
-		29282979217A1410005FAFDE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29282977217A1410005FAFDE /* MainMenu.xib */; };
-		2928297C217A1410005FAFDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2928297B217A1410005FAFDE /* main.m */; };
-		29282988217A2DD7005FAFDE /* StretchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29282987217A2DD7005FAFDE /* StretchView.m */; };
+		2933AF78217A3F8300EACCF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2933AF77217A3F8300EACCF4 /* AppDelegate.m */; };
+		2933AF7A217A3F8400EACCF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2933AF79217A3F8400EACCF4 /* Assets.xcassets */; };
+		2933AF7D217A3F8400EACCF4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2933AF7B217A3F8400EACCF4 /* MainMenu.xib */; };
+		2933AF80217A3F8400EACCF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2933AF7F217A3F8400EACCF4 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2928296F217A140F005FAFDE /* Graficas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graficas.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		29282972217A140F005FAFDE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		29282973217A140F005FAFDE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		29282975217A1410005FAFDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		29282978217A1410005FAFDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		2928297A217A1410005FAFDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2928297B217A1410005FAFDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2928297D217A1410005FAFDE /* Graficas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Graficas.entitlements; sourceTree = "<group>"; };
-		29282986217A2DD7005FAFDE /* StretchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StretchView.h; sourceTree = "<group>"; };
-		29282987217A2DD7005FAFDE /* StretchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StretchView.m; sourceTree = "<group>"; };
+		2933AF73217A3F8300EACCF4 /* Polynomials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polynomials.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2933AF76217A3F8300EACCF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2933AF77217A3F8300EACCF4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2933AF79217A3F8400EACCF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2933AF7C217A3F8400EACCF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2933AF7E217A3F8400EACCF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2933AF7F217A3F8400EACCF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2933AF81217A3F8400EACCF4 /* Polynomials.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Polynomials.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2928296C217A140E005FAFDE /* Frameworks */ = {
+		2933AF70217A3F8300EACCF4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,73 +35,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		29282966217A140E005FAFDE = {
+		2933AF6A217A3F8300EACCF4 = {
 			isa = PBXGroup;
 			children = (
-				29282986217A2DD7005FAFDE /* StretchView.h */,
-				29282987217A2DD7005FAFDE /* StretchView.m */,
-				29282971217A140F005FAFDE /* Graficas */,
-				29282970217A140F005FAFDE /* Products */,
+				2933AF75217A3F8300EACCF4 /* Polynomials */,
+				2933AF74217A3F8300EACCF4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		29282970217A140F005FAFDE /* Products */ = {
+		2933AF74217A3F8300EACCF4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2928296F217A140F005FAFDE /* Graficas.app */,
+				2933AF73217A3F8300EACCF4 /* Polynomials.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		29282971217A140F005FAFDE /* Graficas */ = {
+		2933AF75217A3F8300EACCF4 /* Polynomials */ = {
 			isa = PBXGroup;
 			children = (
-				29282972217A140F005FAFDE /* AppDelegate.h */,
-				29282973217A140F005FAFDE /* AppDelegate.m */,
-				29282975217A1410005FAFDE /* Assets.xcassets */,
-				29282977217A1410005FAFDE /* MainMenu.xib */,
-				2928297A217A1410005FAFDE /* Info.plist */,
-				2928297B217A1410005FAFDE /* main.m */,
-				2928297D217A1410005FAFDE /* Graficas.entitlements */,
+				2933AF76217A3F8300EACCF4 /* AppDelegate.h */,
+				2933AF77217A3F8300EACCF4 /* AppDelegate.m */,
+				2933AF79217A3F8400EACCF4 /* Assets.xcassets */,
+				2933AF7B217A3F8400EACCF4 /* MainMenu.xib */,
+				2933AF7E217A3F8400EACCF4 /* Info.plist */,
+				2933AF7F217A3F8400EACCF4 /* main.m */,
+				2933AF81217A3F8400EACCF4 /* Polynomials.entitlements */,
 			);
-			path = Graficas;
+			path = Polynomials;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2928296E217A140E005FAFDE /* Graficas */ = {
+		2933AF72217A3F8300EACCF4 /* Polynomials */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 29282980217A1410005FAFDE /* Build configuration list for PBXNativeTarget "Graficas" */;
+			buildConfigurationList = 2933AF84217A3F8400EACCF4 /* Build configuration list for PBXNativeTarget "Polynomials" */;
 			buildPhases = (
-				2928296B217A140E005FAFDE /* Sources */,
-				2928296C217A140E005FAFDE /* Frameworks */,
-				2928296D217A140E005FAFDE /* Resources */,
+				2933AF6F217A3F8300EACCF4 /* Sources */,
+				2933AF70217A3F8300EACCF4 /* Frameworks */,
+				2933AF71217A3F8300EACCF4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Graficas;
-			productName = Graficas;
-			productReference = 2928296F217A140F005FAFDE /* Graficas.app */;
+			name = Polynomials;
+			productName = Polynomials;
+			productReference = 2933AF73217A3F8300EACCF4 /* Polynomials.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		29282967217A140E005FAFDE /* Project object */ = {
+		2933AF6B217A3F8300EACCF4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Luis Blazquez Miñambres";
 				TargetAttributes = {
-					2928296E217A140E005FAFDE = {
+					2933AF72217A3F8300EACCF4 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
 			};
-			buildConfigurationList = 2928296A217A140E005FAFDE /* Build configuration list for PBXProject "Graficas" */;
+			buildConfigurationList = 2933AF6E217A3F8300EACCF4 /* Build configuration list for PBXProject "Polynomials" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,46 +107,45 @@
 				en,
 				Base,
 			);
-			mainGroup = 29282966217A140E005FAFDE;
-			productRefGroup = 29282970217A140F005FAFDE /* Products */;
+			mainGroup = 2933AF6A217A3F8300EACCF4;
+			productRefGroup = 2933AF74217A3F8300EACCF4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2928296E217A140E005FAFDE /* Graficas */,
+				2933AF72217A3F8300EACCF4 /* Polynomials */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2928296D217A140E005FAFDE /* Resources */ = {
+		2933AF71217A3F8300EACCF4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29282976217A1410005FAFDE /* Assets.xcassets in Resources */,
-				29282979217A1410005FAFDE /* MainMenu.xib in Resources */,
+				2933AF7A217A3F8400EACCF4 /* Assets.xcassets in Resources */,
+				2933AF7D217A3F8400EACCF4 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2928296B217A140E005FAFDE /* Sources */ = {
+		2933AF6F217A3F8300EACCF4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2928297C217A1410005FAFDE /* main.m in Sources */,
-				29282974217A140F005FAFDE /* AppDelegate.m in Sources */,
-				29282988217A2DD7005FAFDE /* StretchView.m in Sources */,
+				2933AF80217A3F8400EACCF4 /* main.m in Sources */,
+				2933AF78217A3F8300EACCF4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		29282977217A1410005FAFDE /* MainMenu.xib */ = {
+		2933AF7B217A3F8400EACCF4 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				29282978217A1410005FAFDE /* Base */,
+				2933AF7C217A3F8400EACCF4 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -159,7 +153,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2928297E217A1410005FAFDE /* Debug */ = {
+		2933AF82217A3F8400EACCF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -217,7 +211,7 @@
 			};
 			name = Debug;
 		};
-		2928297F217A1410005FAFDE /* Release */ = {
+		2933AF83217A3F8400EACCF4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -268,36 +262,36 @@
 			};
 			name = Release;
 		};
-		29282981217A1410005FAFDE /* Debug */ = {
+		2933AF85217A3F8400EACCF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Graficas/Graficas.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Polynomials/Polynomials.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Graficas/Info.plist;
+				INFOPLIST_FILE = Polynomials/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = es.usal.Graficas;
+				PRODUCT_BUNDLE_IDENTIFIER = es.usal.Polynomials;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		29282982217A1410005FAFDE /* Release */ = {
+		2933AF86217A3F8400EACCF4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Graficas/Graficas.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Polynomials/Polynomials.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Graficas/Info.plist;
+				INFOPLIST_FILE = Polynomials/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = es.usal.Graficas;
+				PRODUCT_BUNDLE_IDENTIFIER = es.usal.Polynomials;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -305,25 +299,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2928296A217A140E005FAFDE /* Build configuration list for PBXProject "Graficas" */ = {
+		2933AF6E217A3F8300EACCF4 /* Build configuration list for PBXProject "Polynomials" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2928297E217A1410005FAFDE /* Debug */,
-				2928297F217A1410005FAFDE /* Release */,
+				2933AF82217A3F8400EACCF4 /* Debug */,
+				2933AF83217A3F8400EACCF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		29282980217A1410005FAFDE /* Build configuration list for PBXNativeTarget "Graficas" */ = {
+		2933AF84217A3F8400EACCF4 /* Build configuration list for PBXNativeTarget "Polynomials" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				29282981217A1410005FAFDE /* Debug */,
-				29282982217A1410005FAFDE /* Release */,
+				2933AF85217A3F8400EACCF4 /* Debug */,
+				2933AF86217A3F8400EACCF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 29282967217A140E005FAFDE /* Project object */;
+	rootObject = 2933AF6B217A3F8300EACCF4 /* Project object */;
 }
