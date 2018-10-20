@@ -11,6 +11,9 @@
 		2933AF7A217A3F8400EACCF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2933AF79217A3F8400EACCF4 /* Assets.xcassets */; };
 		2933AF7D217A3F8400EACCF4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2933AF7B217A3F8400EACCF4 /* MainMenu.xib */; };
 		2933AF80217A3F8400EACCF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2933AF7F217A3F8400EACCF4 /* main.m */; };
+		2933AF89217A3FFA00EACCF4 /* PolynomialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2933AF88217A3FFA00EACCF4 /* PolynomialView.m */; };
+		2933AF8F217A404800EACCF4 /* PolynomialController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2933AF8E217A404800EACCF4 /* PolynomialController.m */; };
+		2933AF92217A414C00EACCF4 /* Polynomial.m in Sources */ = {isa = PBXBuildFile; fileRef = 2933AF91217A414C00EACCF4 /* Polynomial.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,12 @@
 		2933AF7E217A3F8400EACCF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2933AF7F217A3F8400EACCF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2933AF81217A3F8400EACCF4 /* Polynomials.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Polynomials.entitlements; sourceTree = "<group>"; };
+		2933AF87217A3FFA00EACCF4 /* PolynomialView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PolynomialView.h; sourceTree = "<group>"; };
+		2933AF88217A3FFA00EACCF4 /* PolynomialView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PolynomialView.m; sourceTree = "<group>"; };
+		2933AF8D217A404800EACCF4 /* PolynomialController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PolynomialController.h; sourceTree = "<group>"; };
+		2933AF8E217A404800EACCF4 /* PolynomialController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PolynomialController.m; sourceTree = "<group>"; };
+		2933AF90217A414C00EACCF4 /* Polynomial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Polynomial.h; sourceTree = "<group>"; };
+		2933AF91217A414C00EACCF4 /* Polynomial.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Polynomial.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,12 @@
 				2933AF77217A3F8300EACCF4 /* AppDelegate.m */,
 				2933AF79217A3F8400EACCF4 /* Assets.xcassets */,
 				2933AF7B217A3F8400EACCF4 /* MainMenu.xib */,
+				2933AF8E217A404800EACCF4 /* PolynomialController.m */,
+				2933AF8D217A404800EACCF4 /* PolynomialController.h */,
+				2933AF87217A3FFA00EACCF4 /* PolynomialView.h */,
+				2933AF88217A3FFA00EACCF4 /* PolynomialView.m */,
+				2933AF90217A414C00EACCF4 /* Polynomial.h */,
+				2933AF91217A414C00EACCF4 /* Polynomial.m */,
 				2933AF7E217A3F8400EACCF4 /* Info.plist */,
 				2933AF7F217A3F8400EACCF4 /* main.m */,
 				2933AF81217A3F8400EACCF4 /* Polynomials.entitlements */,
@@ -135,6 +150,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2933AF80217A3F8400EACCF4 /* main.m in Sources */,
+				2933AF8F217A404800EACCF4 /* PolynomialController.m in Sources */,
+				2933AF89217A3FFA00EACCF4 /* PolynomialView.m in Sources */,
+				2933AF92217A414C00EACCF4 /* Polynomial.m in Sources */,
 				2933AF78217A3F8300EACCF4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
