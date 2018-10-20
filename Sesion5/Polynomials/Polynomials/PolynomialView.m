@@ -30,11 +30,14 @@ NSString *PolynomialControllerSendViewNotification = @"PolynomialControllerSendV
     
     // Drawing code here.
     NSLog(@"En drawRect");
-    NSRect bounds = [self bounds];
-    [[NSColor blackColor] set];
-    [NSBezierPath fillRect:bounds];
-    NSGraphicsContext *ctx = [NSGraphicsContext currentContext];
+    NSRect bounds = [self bounds];          // Dimensiones de la vista
+    [[NSColor blackColor] set];             // Fondo de la vista de color negro
+    [NSBezierPath fillRect:bounds];         // Dibuja las lineas de los limites de la vista
+    NSGraphicsContext *ctx = [NSGraphicsContext currentContext]; // Contexto grafico actual
     
+    // Dimensiones de la ventana
+    // Puntos x e y de la esquina inferior izquierda
+    // Y altura y anchura
     NSInteger origenX = bounds.origin.x;
     NSInteger origenY = bounds.origin.y;
     float altura = bounds.size.height;

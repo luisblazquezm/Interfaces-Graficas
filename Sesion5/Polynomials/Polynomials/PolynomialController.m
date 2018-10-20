@@ -44,24 +44,29 @@ extern NSString *PolynomialControllerSendViewNotification;
     }
     NSInteger i = random() % [polynomials count];
     [polynomials removeObjectAtIndex:i];
-    [polynomialView setNeedsDisplay:YES];
+    [polynomialView setNeedsDisplay:YES]; // Actualiza la vista porque se ha borrado una grafica o funcion (se fuerza a rellamar a drawRect)
     
 }
      
 -(void) handlePolynomialReceived:(NSNotification*)aNotification
 {
+    // Lo que se recibe de la notificación que es la información de las dimensiones de la ventana en cada momento (asi como su contexto grafico -> todas las graficas están dentro del mismo contexto gráfico)
     NSDictionary *info = [aNotification userInfo];
     NSNumber *oX = [info objectForKey:@"OrigenX"];
     NSNumber *oY = [info objectForKey:@"OrigenY"];
     NSNumber *alt = [info objectForKey:@"Altura"];
     NSNumber *anch = [info objectForKey:@"Ancho"];
     NSGraphicsContext *ctx = [info objectForKey:@"ContextoGrafico"];
+    
     NSRect bounds;
     bounds.origin.x = [oX integerValue];
     bounds.origin.y = [oY integerValue];
     bounds.size.height = [alt integerValue];
     bounds.size.width = [anch integerValue];
     
+    // Cada vez que se añade una grafica se llama a esta notificacion
+    // Y hay que redibujar las graficas ya dibujadas anteriormente y la que se acaba de añadir
+    // Cada una dentro del mismo contexto grafico (Las anteriores cambian del contexto grafico en el que estaban al ACTUAL que acaba de cambiar debido a la adición de la nueva gráfica)
     for (Polynomial *p in polynomials){
         [p drawInRect:bounds withGraphicsContext:ctx];
     }
