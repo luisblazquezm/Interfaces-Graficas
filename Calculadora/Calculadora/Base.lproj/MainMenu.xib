@@ -704,9 +704,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="ButtonReset:" target="eyg-wD-Tiz" id="QhX-zS-iCs"/>
-                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PwO-xm-SOh">
                         <rect key="frame" x="122" y="203" width="99" height="32"/>
@@ -715,9 +712,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="ButtonNegative_Positive:" target="eyg-wD-Tiz" id="AP7-Pu-iiA"/>
-                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a9p-K7-cXA">
                         <rect key="frame" x="230" y="203" width="99" height="32"/>
@@ -726,9 +720,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="ButtonPercentage:" target="eyg-wD-Tiz" id="6ao-Oz-1gH"/>
-                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="elo-6O-C4N">
                         <rect key="frame" x="339" y="203" width="127" height="32"/>
@@ -737,9 +728,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="ButtonDivide:" target="eyg-wD-Tiz" id="PAn-YJ-mVe"/>
-                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wfJ-4E-7x7">
                         <rect key="frame" x="339" y="157" width="127" height="32"/>
@@ -748,9 +736,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="ButtonMultiply:" target="eyg-wD-Tiz" id="BjK-AP-ZVT"/>
-                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yP-wq-fco">
                         <rect key="frame" x="339" y="109" width="127" height="32"/>
@@ -759,9 +744,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="ButtonMinus:" target="eyg-wD-Tiz" id="7Fe-6n-khW"/>
-                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jmC-06-V2b">
                         <rect key="frame" x="339" y="65" width="127" height="32"/>
@@ -770,9 +752,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="ButtonPlus:" target="eyg-wD-Tiz" id="PyB-Oj-F7n"/>
-                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c4C-Nl-Yt4">
                         <rect key="frame" x="339" y="13" width="127" height="32"/>
@@ -781,9 +760,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="ButtonEqual:" target="eyg-wD-Tiz" id="CHp-wF-UD2"/>
-                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sKT-tW-gVG">
                         <rect key="frame" x="14" y="157" width="99" height="32"/>
@@ -792,9 +768,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="Button7:" target="eyg-wD-Tiz" id="kSE-Gq-Bpm"/>
-                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bDC-CY-dPM">
                         <rect key="frame" x="122" y="157" width="99" height="32"/>
@@ -803,9 +776,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="Button8:" target="eyg-wD-Tiz" id="4NL-aF-VAz"/>
-                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MEZ-e8-INa">
                         <rect key="frame" x="230" y="157" width="99" height="32"/>
@@ -814,9 +784,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="Button9:" target="eyg-wD-Tiz" id="Jtg-nD-VKM"/>
-                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xvf-c6-7qK">
                         <rect key="frame" x="14" y="109" width="99" height="32"/>
@@ -825,9 +792,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="Button4:" target="eyg-wD-Tiz" id="N2p-3b-uw3"/>
-                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Isr-ED-Erf">
                         <rect key="frame" x="14" y="65" width="99" height="32"/>
@@ -836,9 +800,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="Button1:" target="eyg-wD-Tiz" id="4E5-Di-O73"/>
-                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6VD-yt-3xs">
                         <rect key="frame" x="122" y="109" width="99" height="32"/>
@@ -847,9 +808,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="Button5:" target="eyg-wD-Tiz" id="tqN-9N-Mje"/>
-                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="56Y-Xp-Tsz">
                         <rect key="frame" x="230" y="109" width="99" height="32"/>
@@ -858,9 +816,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="Button6:" target="eyg-wD-Tiz" id="nyI-nc-B4d"/>
-                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kcz-4h-srd">
                         <rect key="frame" x="122" y="65" width="99" height="32"/>
@@ -869,9 +824,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="Button2:" target="eyg-wD-Tiz" id="bim-W1-5Ky"/>
-                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mwx-Bb-JAS">
                         <rect key="frame" x="230" y="65" width="99" height="32"/>
@@ -880,9 +832,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="Button3:" target="eyg-wD-Tiz" id="mWX-wv-Wsw"/>
-                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3IU-UG-Drf">
                         <rect key="frame" x="14" y="13" width="207" height="32"/>
@@ -891,9 +840,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="Button0:" target="eyg-wD-Tiz" id="XAZ-PA-1Ac"/>
-                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ndq-Ju-dxT">
                         <rect key="frame" x="230" y="13" width="99" height="32"/>
@@ -902,18 +848,9 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="ButtonPoint:" target="eyg-wD-Tiz" id="avf-iW-7Vl"/>
-                        </connections>
                     </button>
                 </subviews>
             </view>
         </window>
-        <customObject id="eyg-wD-Tiz" customClass="Controller">
-            <connections>
-                <outlet property="entrada" destination="j6T-34-Zkp" id="tO6-T8-L0u"/>
-                <outlet property="salida" destination="j6T-34-Zkp" id="Fjf-0P-PEZ"/>
-            </connections>
-        </customObject>
     </objects>
 </document>

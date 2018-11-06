@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D1B8C0C21622BC100306835 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1B8C0B21622BC100306835 /* AppDelegate.m */; };
+		7D1B8C0E21622BC200306835 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D1B8C0D21622BC200306835 /* Assets.xcassets */; };
+		7D1B8C1121622BC200306835 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D1B8C0F21622BC200306835 /* MainMenu.xib */; };
+		7D1B8C1421622BC200306835 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1B8C1321622BC200306835 /* main.m */; };
+		7D1B8C1F21622BC200306835 /* MisControlesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1B8C1E21622BC200306835 /* MisControlesTests.m */; };
+		7D1B8C2A21622BC200306835 /* MisControlesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1B8C2921622BC200306835 /* MisControlesUITests.m */; };
+		7D1B8C3921622BEF00306835 /* MisControlesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1B8C3821622BEF00306835 /* MisControlesController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D1B8C1B21622BC200306835 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D1B8BFF21622BC000306835 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D1B8C0621622BC000306835;
+			remoteInfo = MisControles;
+		};
+		7D1B8C2621622BC200306835 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D1B8BFF21622BC000306835 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D1B8C0621622BC000306835;
+			remoteInfo = MisControles;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7D1B8C0721622BC000306835 /* MisControles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MisControles.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D1B8C0A21622BC100306835 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7D1B8C0B21622BC100306835 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7D1B8C0D21622BC200306835 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D1B8C1021622BC200306835 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		7D1B8C1221622BC200306835 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D1B8C1321622BC200306835 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7D1B8C1521622BC200306835 /* MisControles.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MisControles.entitlements; sourceTree = "<group>"; };
+		7D1B8C1A21622BC200306835 /* MisControlesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MisControlesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D1B8C1E21622BC200306835 /* MisControlesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MisControlesTests.m; sourceTree = "<group>"; };
+		7D1B8C2021622BC200306835 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D1B8C2521622BC200306835 /* MisControlesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MisControlesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D1B8C2921622BC200306835 /* MisControlesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MisControlesUITests.m; sourceTree = "<group>"; };
+		7D1B8C2B21622BC200306835 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D1B8C3721622BEF00306835 /* MisControlesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MisControlesController.h; sourceTree = "<group>"; };
+		7D1B8C3821622BEF00306835 /* MisControlesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MisControlesController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D1B8C0421622BC000306835 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D1B8C1721622BC200306835 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D1B8C2221622BC200306835 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D1B8BFE21622BC000306835 = {
+			isa = PBXGroup;
+			children = (
+				7D1B8C0921622BC000306835 /* MisControles */,
+				7D1B8C1D21622BC200306835 /* MisControlesTests */,
+				7D1B8C2821622BC200306835 /* MisControlesUITests */,
+				7D1B8C0821622BC000306835 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7D1B8C0821622BC000306835 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D1B8C0721622BC000306835 /* MisControles.app */,
+				7D1B8C1A21622BC200306835 /* MisControlesTests.xctest */,
+				7D1B8C2521622BC200306835 /* MisControlesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D1B8C0921622BC000306835 /* MisControles */ = {
+			isa = PBXGroup;
+			children = (
+				7D1B8C0A21622BC100306835 /* AppDelegate.h */,
+				7D1B8C0B21622BC100306835 /* AppDelegate.m */,
+				7D1B8C0D21622BC200306835 /* Assets.xcassets */,
+				7D1B8C0F21622BC200306835 /* MainMenu.xib */,
+				7D1B8C1221622BC200306835 /* Info.plist */,
+				7D1B8C1321622BC200306835 /* main.m */,
+				7D1B8C1521622BC200306835 /* MisControles.entitlements */,
+				7D1B8C3721622BEF00306835 /* MisControlesController.h */,
+				7D1B8C3821622BEF00306835 /* MisControlesController.m */,
+			);
+			path = MisControles;
+			sourceTree = "<group>";
+		};
+		7D1B8C1D21622BC200306835 /* MisControlesTests */ = {
+			isa = PBXGroup;
+			children = (
+				7D1B8C1E21622BC200306835 /* MisControlesTests.m */,
+				7D1B8C2021622BC200306835 /* Info.plist */,
+			);
+			path = MisControlesTests;
+			sourceTree = "<group>";
+		};
+		7D1B8C2821622BC200306835 /* MisControlesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7D1B8C2921622BC200306835 /* MisControlesUITests.m */,
+				7D1B8C2B21622BC200306835 /* Info.plist */,
+			);
+			path = MisControlesUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D1B8C0621622BC000306835 /* MisControles */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D1B8C2E21622BC200306835 /* Build configuration list for PBXNativeTarget "MisControles" */;
+			buildPhases = (
+				7D1B8C0321622BC000306835 /* Sources */,
+				7D1B8C0421622BC000306835 /* Frameworks */,
+				7D1B8C0521622BC000306835 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MisControles;
+			productName = MisControles;
+			productReference = 7D1B8C0721622BC000306835 /* MisControles.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7D1B8C1921622BC200306835 /* MisControlesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D1B8C3121622BC200306835 /* Build configuration list for PBXNativeTarget "MisControlesTests" */;
+			buildPhases = (
+				7D1B8C1621622BC200306835 /* Sources */,
+				7D1B8C1721622BC200306835 /* Frameworks */,
+				7D1B8C1821622BC200306835 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D1B8C1C21622BC200306835 /* PBXTargetDependency */,
+			);
+			name = MisControlesTests;
+			productName = MisControlesTests;
+			productReference = 7D1B8C1A21622BC200306835 /* MisControlesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7D1B8C2421622BC200306835 /* MisControlesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D1B8C3421622BC200306835 /* Build configuration list for PBXNativeTarget "MisControlesUITests" */;
+			buildPhases = (
+				7D1B8C2121622BC200306835 /* Sources */,
+				7D1B8C2221622BC200306835 /* Frameworks */,
+				7D1B8C2321622BC200306835 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D1B8C2721622BC200306835 /* PBXTargetDependency */,
+			);
+			name = MisControlesUITests;
+			productName = MisControlesUITests;
+			productReference = 7D1B8C2521622BC200306835 /* MisControlesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D1B8BFF21622BC000306835 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = USAL;
+				TargetAttributes = {
+					7D1B8C0621622BC000306835 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					7D1B8C1921622BC200306835 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 7D1B8C0621622BC000306835;
+					};
+					7D1B8C2421622BC200306835 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 7D1B8C0621622BC000306835;
+					};
+				};
+			};
+			buildConfigurationList = 7D1B8C0221622BC000306835 /* Build configuration list for PBXProject "MisControles" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7D1B8BFE21622BC000306835;
+			productRefGroup = 7D1B8C0821622BC000306835 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D1B8C0621622BC000306835 /* MisControles */,
+				7D1B8C1921622BC200306835 /* MisControlesTests */,
+				7D1B8C2421622BC200306835 /* MisControlesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D1B8C0521622BC000306835 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D1B8C0E21622BC200306835 /* Assets.xcassets in Resources */,
+				7D1B8C1121622BC200306835 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D1B8C1821622BC200306835 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D1B8C2321622BC200306835 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D1B8C0321622BC000306835 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D1B8C3921622BEF00306835 /* MisControlesController.m in Sources */,
+				7D1B8C1421622BC200306835 /* main.m in Sources */,
+				7D1B8C0C21622BC100306835 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D1B8C1621622BC200306835 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D1B8C1F21622BC200306835 /* MisControlesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D1B8C2121622BC200306835 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D1B8C2A21622BC200306835 /* MisControlesUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D1B8C1C21622BC200306835 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D1B8C0621622BC000306835 /* MisControles */;
+			targetProxy = 7D1B8C1B21622BC200306835 /* PBXContainerItemProxy */;
+		};
+		7D1B8C2721622BC200306835 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D1B8C0621622BC000306835 /* MisControles */;
+			targetProxy = 7D1B8C2621622BC200306835 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7D1B8C0F21622BC200306835 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D1B8C1021622BC200306835 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D1B8C2C21622BC200306835 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7D1B8C2D21622BC200306835 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7D1B8C2F21622BC200306835 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MisControles/MisControles.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MisControles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.usal.MisControles;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7D1B8C3021622BC200306835 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MisControles/MisControles.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MisControles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.usal.MisControles;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7D1B8C3221622BC200306835 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MisControlesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.usal.MisControlesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MisControles.app/Contents/MacOS/MisControles";
+			};
+			name = Debug;
+		};
+		7D1B8C3321622BC200306835 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MisControlesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.usal.MisControlesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MisControles.app/Contents/MacOS/MisControles";
+			};
+			name = Release;
+		};
+		7D1B8C3521622BC200306835 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MisControlesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.usal.MisControlesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MisControles;
+			};
+			name = Debug;
+		};
+		7D1B8C3621622BC200306835 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MisControlesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.usal.MisControlesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MisControles;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D1B8C0221622BC000306835 /* Build configuration list for PBXProject "MisControles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D1B8C2C21622BC200306835 /* Debug */,
+				7D1B8C2D21622BC200306835 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D1B8C2E21622BC200306835 /* Build configuration list for PBXNativeTarget "MisControles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D1B8C2F21622BC200306835 /* Debug */,
+				7D1B8C3021622BC200306835 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D1B8C3121622BC200306835 /* Build configuration list for PBXNativeTarget "MisControlesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D1B8C3221622BC200306835 /* Debug */,
+				7D1B8C3321622BC200306835 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D1B8C3421622BC200306835 /* Build configuration list for PBXNativeTarget "MisControlesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D1B8C3521622BC200306835 /* Debug */,
+				7D1B8C3621622BC200306835 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7D1B8BFF21622BC000306835 /* Project object */;
+}
