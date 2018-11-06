@@ -51,6 +51,8 @@ extern NSString *PolynomialControllerSendViewNotification;
 -(void) handlePolynomialReceived:(NSNotification*)aNotification
 {
     // Lo que se recibe de la notificación que es la información de las dimensiones de la ventana en cada momento (asi como su contexto grafico -> todas las graficas están dentro del mismo contexto gráfico)
+    
+        NSLog(@"Notific recivida");
     NSDictionary *info = [aNotification userInfo];
     NSNumber *oX = [info objectForKey:@"OrigenX"];
     NSNumber *oY = [info objectForKey:@"OrigenY"];
@@ -67,8 +69,10 @@ extern NSString *PolynomialControllerSendViewNotification;
     // Cada vez que se añade una grafica se llama a esta notificacion
     // Y hay que redibujar las graficas ya dibujadas anteriormente y la que se acaba de añadir
     // Cada una dentro del mismo contexto grafico (Las anteriores cambian del contexto grafico en el que estaban al ACTUAL que acaba de cambiar debido a la adición de la nueva gráfica)
+            NSLog(@"A pintar Count = %ld!!!!!",[polynomials count]);
     for (Polynomial *p in polynomials){
         [p drawInRect:bounds withGraphicsContext:ctx];
     }
+                NSLog(@"Grafica Representada");
 }
 @end

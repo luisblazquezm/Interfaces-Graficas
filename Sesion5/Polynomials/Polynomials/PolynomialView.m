@@ -58,6 +58,8 @@ NSString *PolynomialControllerSendViewNotification = @"PolynomialControllerSendV
     [nc postNotificationName:PolynomialControllerSendViewNotification
                       object:self
                     userInfo:info];
+    
+    NSLog(@"Notificacion enviada");
 
 }
 
