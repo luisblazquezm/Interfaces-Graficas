@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D2C4877216B65DD007737AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2C4876216B65DD007737AF /* AppDelegate.m */; };
+		7D2C4879216B65DF007737AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D2C4878216B65DF007737AF /* Assets.xcassets */; };
+		7D2C487C216B65DF007737AF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D2C487A216B65DF007737AF /* MainMenu.xib */; };
+		7D2C487F216B65DF007737AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2C487E216B65DF007737AF /* main.m */; };
+		7D2C488A216B65DF007737AF /* EjercicioTablasTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2C4889216B65DF007737AF /* EjercicioTablasTests.m */; };
+		7D2C4895216B65DF007737AF /* EjercicioTablasUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2C4894216B65DF007737AF /* EjercicioTablasUITests.m */; };
+		7D2C48A4216B681B007737AF /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2C48A3216B681B007737AF /* Controller.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D2C4886216B65DF007737AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D2C486A216B65DD007737AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D2C4871216B65DD007737AF;
+			remoteInfo = EjercicioTablas;
+		};
+		7D2C4891216B65DF007737AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D2C486A216B65DD007737AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D2C4871216B65DD007737AF;
+			remoteInfo = EjercicioTablas;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7D2C4872216B65DD007737AF /* EjercicioTablas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EjercicioTablas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D2C4875216B65DD007737AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7D2C4876216B65DD007737AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7D2C4878216B65DF007737AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D2C487B216B65DF007737AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		7D2C487D216B65DF007737AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D2C487E216B65DF007737AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7D2C4880216B65DF007737AF /* EjercicioTablas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EjercicioTablas.entitlements; sourceTree = "<group>"; };
+		7D2C4885216B65DF007737AF /* EjercicioTablasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EjercicioTablasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D2C4889216B65DF007737AF /* EjercicioTablasTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EjercicioTablasTests.m; sourceTree = "<group>"; };
+		7D2C488B216B65DF007737AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D2C4890216B65DF007737AF /* EjercicioTablasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EjercicioTablasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D2C4894216B65DF007737AF /* EjercicioTablasUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EjercicioTablasUITests.m; sourceTree = "<group>"; };
+		7D2C4896216B65DF007737AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D2C48A2216B681B007737AF /* Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		7D2C48A3216B681B007737AF /* Controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D2C486F216B65DD007737AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D2C4882216B65DF007737AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D2C488D216B65DF007737AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D2C4869216B65DD007737AF = {
+			isa = PBXGroup;
+			children = (
+				7D2C4874216B65DD007737AF /* EjercicioTablas */,
+				7D2C4888216B65DF007737AF /* EjercicioTablasTests */,
+				7D2C4893216B65DF007737AF /* EjercicioTablasUITests */,
+				7D2C4873216B65DD007737AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7D2C4873216B65DD007737AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D2C4872216B65DD007737AF /* EjercicioTablas.app */,
+				7D2C4885216B65DF007737AF /* EjercicioTablasTests.xctest */,
+				7D2C4890216B65DF007737AF /* EjercicioTablasUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D2C4874216B65DD007737AF /* EjercicioTablas */ = {
+			isa = PBXGroup;
+			children = (
+				7D2C4875216B65DD007737AF /* AppDelegate.h */,
+				7D2C4876216B65DD007737AF /* AppDelegate.m */,
+				7D2C4878216B65DF007737AF /* Assets.xcassets */,
+				7D2C487A216B65DF007737AF /* MainMenu.xib */,
+				7D2C487D216B65DF007737AF /* Info.plist */,
+				7D2C487E216B65DF007737AF /* main.m */,
+				7D2C4880216B65DF007737AF /* EjercicioTablas.entitlements */,
+				7D2C48A2216B681B007737AF /* Controller.h */,
+				7D2C48A3216B681B007737AF /* Controller.m */,
+			);
+			path = EjercicioTablas;
+			sourceTree = "<group>";
+		};
+		7D2C4888216B65DF007737AF /* EjercicioTablasTests */ = {
+			isa = PBXGroup;
+			children = (
+				7D2C4889216B65DF007737AF /* EjercicioTablasTests.m */,
+				7D2C488B216B65DF007737AF /* Info.plist */,
+			);
+			path = EjercicioTablasTests;
+			sourceTree = "<group>";
+		};
+		7D2C4893216B65DF007737AF /* EjercicioTablasUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7D2C4894216B65DF007737AF /* EjercicioTablasUITests.m */,
+				7D2C4896216B65DF007737AF /* Info.plist */,
+			);
+			path = EjercicioTablasUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D2C4871216B65DD007737AF /* EjercicioTablas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D2C4899216B65DF007737AF /* Build configuration list for PBXNativeTarget "EjercicioTablas" */;
+			buildPhases = (
+				7D2C486E216B65DD007737AF /* Sources */,
+				7D2C486F216B65DD007737AF /* Frameworks */,
+				7D2C4870216B65DD007737AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EjercicioTablas;
+			productName = EjercicioTablas;
+			productReference = 7D2C4872216B65DD007737AF /* EjercicioTablas.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7D2C4884216B65DF007737AF /* EjercicioTablasTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D2C489C216B65DF007737AF /* Build configuration list for PBXNativeTarget "EjercicioTablasTests" */;
+			buildPhases = (
+				7D2C4881216B65DF007737AF /* Sources */,
+				7D2C4882216B65DF007737AF /* Frameworks */,
+				7D2C4883216B65DF007737AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D2C4887216B65DF007737AF /* PBXTargetDependency */,
+			);
+			name = EjercicioTablasTests;
+			productName = EjercicioTablasTests;
+			productReference = 7D2C4885216B65DF007737AF /* EjercicioTablasTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7D2C488F216B65DF007737AF /* EjercicioTablasUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D2C489F216B65DF007737AF /* Build configuration list for PBXNativeTarget "EjercicioTablasUITests" */;
+			buildPhases = (
+				7D2C488C216B65DF007737AF /* Sources */,
+				7D2C488D216B65DF007737AF /* Frameworks */,
+				7D2C488E216B65DF007737AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D2C4892216B65DF007737AF /* PBXTargetDependency */,
+			);
+			name = EjercicioTablasUITests;
+			productName = EjercicioTablasUITests;
+			productReference = 7D2C4890216B65DF007737AF /* EjercicioTablasUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D2C486A216B65DD007737AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = USAL;
+				TargetAttributes = {
+					7D2C4871216B65DD007737AF = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					7D2C4884216B65DF007737AF = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 7D2C4871216B65DD007737AF;
+					};
+					7D2C488F216B65DF007737AF = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 7D2C4871216B65DD007737AF;
+					};
+				};
+			};
+			buildConfigurationList = 7D2C486D216B65DD007737AF /* Build configuration list for PBXProject "EjercicioTablas" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7D2C4869216B65DD007737AF;
+			productRefGroup = 7D2C4873216B65DD007737AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D2C4871216B65DD007737AF /* EjercicioTablas */,
+				7D2C4884216B65DF007737AF /* EjercicioTablasTests */,
+				7D2C488F216B65DF007737AF /* EjercicioTablasUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D2C4870216B65DD007737AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D2C4879216B65DF007737AF /* Assets.xcassets in Resources */,
+				7D2C487C216B65DF007737AF /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D2C4883216B65DF007737AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D2C488E216B65DF007737AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D2C486E216B65DD007737AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D2C487F216B65DF007737AF /* main.m in Sources */,
+				7D2C4877216B65DD007737AF /* AppDelegate.m in Sources */,
+				7D2C48A4216B681B007737AF /* Controller.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D2C4881216B65DF007737AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D2C488A216B65DF007737AF /* EjercicioTablasTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D2C488C216B65DF007737AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D2C4895216B65DF007737AF /* EjercicioTablasUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D2C4887216B65DF007737AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D2C4871216B65DD007737AF /* EjercicioTablas */;
+			targetProxy = 7D2C4886216B65DF007737AF /* PBXContainerItemProxy */;
+		};
+		7D2C4892216B65DF007737AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D2C4871216B65DD007737AF /* EjercicioTablas */;
+			targetProxy = 7D2C4891216B65DF007737AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7D2C487A216B65DF007737AF /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D2C487B216B65DF007737AF /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D2C4897216B65DF007737AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7D2C4898216B65DF007737AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7D2C489A216B65DF007737AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EjercicioTablas/EjercicioTablas.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EjercicioTablas/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.usal.EjercicioTablas;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7D2C489B216B65DF007737AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EjercicioTablas/EjercicioTablas.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EjercicioTablas/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.usal.EjercicioTablas;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7D2C489D216B65DF007737AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EjercicioTablasTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.usal.EjercicioTablasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EjercicioTablas.app/Contents/MacOS/EjercicioTablas";
+			};
+			name = Debug;
+		};
+		7D2C489E216B65DF007737AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EjercicioTablasTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.usal.EjercicioTablasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EjercicioTablas.app/Contents/MacOS/EjercicioTablas";
+			};
+			name = Release;
+		};
+		7D2C48A0216B65DF007737AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EjercicioTablasUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.usal.EjercicioTablasUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EjercicioTablas;
+			};
+			name = Debug;
+		};
+		7D2C48A1216B65DF007737AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EjercicioTablasUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.usal.EjercicioTablasUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EjercicioTablas;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D2C486D216B65DD007737AF /* Build configuration list for PBXProject "EjercicioTablas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D2C4897216B65DF007737AF /* Debug */,
+				7D2C4898216B65DF007737AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D2C4899216B65DF007737AF /* Build configuration list for PBXNativeTarget "EjercicioTablas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D2C489A216B65DF007737AF /* Debug */,
+				7D2C489B216B65DF007737AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D2C489C216B65DF007737AF /* Build configuration list for PBXNativeTarget "EjercicioTablasTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D2C489D216B65DF007737AF /* Debug */,
+				7D2C489E216B65DF007737AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D2C489F216B65DF007737AF /* Build configuration list for PBXNativeTarget "EjercicioTablasUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D2C48A0216B65DF007737AF /* Debug */,
+				7D2C48A1216B65DF007737AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7D2C486A216B65DD007737AF /* Project object */;
+}
