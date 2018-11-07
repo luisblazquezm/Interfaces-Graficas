@@ -7,21 +7,50 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel Orientation="Horizontal">
-        <StackPanel HorizontalAlignment="Left" Margin="10" Width="200" Height="300"> <!-- StackPanel de los botones-->
-            <Button Name="BotonInvierte" Content="Invierte" Margin="40" Click="BotonInvierte_Click" Height="30">
+        <StackPanel HorizontalAlignment="Left" Margin="10" Width="150" Height="300"> <!-- StackPanel de los botones-->
+            <Button Name="BotonInvierte" Content="Invierte" Margin="20" Click="BotonInvierte_Click" Height="30" VerticalAlignment="Top">
                 
             </Button>
-            <Button Name="BotonMayuscula" Content="Mayuscula" Margin="40" Click="BotonMayuscula_Click" Height="30">
+            <Button Name="BotonMayuscula" Content="Mayuscula" Margin="20" Click="BotonMayuscula_Click" Height="30" VerticalAlignment="Top">
                 
+            </Button>
+            <Button Name="Rojo" Margin="20" Click="Rojo_Click">
+                <Rectangle Width="20" Height="20" Fill="Red"/>
+            </Button>
+            <Button Name="Verde" Margin="20" Click="Verde_Click">
+                <Rectangle Width="20" Height="20" Fill="Green"/>
             </Button>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Right" Margin="10" Width="500" Height="300"> <!--StackPanel del label-->
+        <StackPanel HorizontalAlignment="Right" Margin="10" Width="520" Height="300"> <!--StackPanel del label y el texto-->
             <TextBox Name="CajaTexto" Margin="15" Height="30" BorderThickness="2" BorderBrush="Black">
                 
             </TextBox>
-            <Label Name="Etiqueta" Margin="15" Height="30" BorderThickness="2" BorderBrush="Black">
+            <Label Name="Etiqueta" Margin="15" Height="30" BorderThickness="2" BorderBrush="Black" Background="White">
                 
             </Label>
+            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center"  Width="500" Height="150" Orientation="Horizontal">
+                <!-- StackPanel de los grados Celsius-->
+                <StackPanel HorizontalAlignment="Left" Margin="10">
+                    <TextBox Name ="CelsiusBox" Margin="20" Width="150" Height="30">
+
+                    </TextBox>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Height="100" Width="100" Margin="10">
+                    <Button Name="ConvertirButton" Content="Convertir" VerticalAlignment="Center" Margin="10" Click="ConvertirButton_Click">
+                        
+                    </Button>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right" Margin="10">
+                    <Label Name ="FarenheitBox" Margin="20" Width="150" Height="30" BorderThickness="2" BorderBrush="Black" Background="White">
+
+                    </Label>
+                </StackPanel>
+            </StackPanel>
         </StackPanel>
     </StackPanel>
+    
+    <Window.Background> <!-- Para poner una foto de fondo de pantalla-->
+        <ImageBrush
+            ImageSource="descarga.jpg"/>
+    </Window.Background>
 </Window>

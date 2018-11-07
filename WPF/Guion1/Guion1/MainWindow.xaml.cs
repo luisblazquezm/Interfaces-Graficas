@@ -44,5 +44,24 @@ namespace Guion1
             etiq.Content = CajaTexto.Text.ToUpper();
         }
 
+        private void Rojo_Click(object sender, RoutedEventArgs e)
+        {
+            Background = Brushes.Red;
+        }
+
+        private void Verde_Click(object sender, RoutedEventArgs e)
+        {
+            Background = Brushes.Green;
+        }
+
+        private void ConvertirButton_Click(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = CelsiusBox;
+            Label etiq = FarenheitBox;
+            double aux = double.Parse(tb.Text);
+            double output = ((aux*9)/5)+32;  // OJO Cuidado aqui 
+
+            etiq.Content = output.ToString();
+        }
     }
 }
