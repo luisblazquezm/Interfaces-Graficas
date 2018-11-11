@@ -36,7 +36,12 @@
             </DataGrid>
         </StackPanel>
         <Canvas Margin="10" Width="750" Height="200"> <!--Canvas para las cajas de texto y el scroll-->
+            <TextBox Name="OnlyNumbersBox" Margin="10" Width="100" PreviewTextInput="OnlyNumbersBox_PreviewTextInput" >
             
+            </TextBox>
+            
+            
+          
         </Canvas>
     </StackPanel>
 </Window>

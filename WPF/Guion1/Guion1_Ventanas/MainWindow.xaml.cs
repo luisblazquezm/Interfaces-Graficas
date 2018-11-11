@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,6 +21,8 @@ namespace Guion1_Ventanas
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        string previousInput = "";
 
 
         public class Function
@@ -56,6 +59,16 @@ namespace Guion1_Ventanas
             tableGrid.ItemsSource = obj;
         }
 
-        
+
+        private void OnlyNumbersBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            // ^-?[0-9]+$|^-?[0-9]*.?[0-9]$
+            Regex reg = new Regex(@"^-?[0-9]*(?:\.[0-9]*)?$");
+            if (reg.IsMatch(e.Text) && !(e.Text == "." && ((TextBox)sender).Text.Contains(e.Text)) && !(e.Text == "-" && ((TextBox)sender).Text.Contains(e.Text)))
+                e.Handled = false;
+            else
+                e.Handled = true;
+            //e.Handled = !reg.IsMatch((sender as TextBox).Text.Insert((sender as TextBox).SelectionStart, e.Text));
+        }
     }
 }
