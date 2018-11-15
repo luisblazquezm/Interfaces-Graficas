@@ -20,9 +20,22 @@ namespace ConversorEuroDolar
     /// </summary>
     public partial class MainWindow : Window
     {
+        static float factor_ED = 1.30F;
+
         public MainWindow()
         {
             InitializeComponent();
+            Dolar.KeyDown += new KeyEventHandler(Euro_KeyDown);
+            Euro.KeyDown += new KeyEventHandler(Euro_KeyDown);
+        }
+
+        private void Euro_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+                if (sender == Euro)
+                    Dolar.Text = ((Euro.DoubleValue * factor_ED)).ToString();
+                else if (sender == Dolar)
+                    Euro.Text = ((Dolar.DoubleValue / factor_ED)).ToString();
         }
     }
 }
