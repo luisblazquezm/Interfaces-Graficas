@@ -4,7 +4,7 @@
         xmlns:custom="clr-namespace:ConversorEuroDolar"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ConversorEuroDolar"
+        xmlns:local="clr-namespace:Jade"
         mc:Ignorable="d"
         Title="MainWindow" Height="250" Width="300">
     
@@ -22,6 +22,7 @@
         <WrapPanel Grid.Row="1">
             <Label Margin="5" Content="DOLAR"/>
             <custom:NumericTextBox Margin="5" Width="200" x:Name="Dolar"/>
+            <local:/>
         </WrapPanel>
     </Grid>
 </Window>

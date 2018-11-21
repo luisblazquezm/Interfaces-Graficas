@@ -19,22 +19,27 @@ namespace Ejercicio4
     /// </summary>
     public partial class MainWindow : Window
     {
+        public struct FuncRect
+        {
+            public double XMin, YMin, XMax, YMax;
+        }
 
-        public static int REAL_MIN_INDEX = 0;
-        public static int REAL_MAX_INDEX = 1;
-        public static int PANT_MIN_INDEX = 2;
-        public static int PANT_MAX_INDEX = 3;
+        public FuncRect real, pant;
 
-        public static double xrealMin = -10;
-        public static double yrealMin = -10;
-        public static double xrealMax = 10;
-        public static double yrealMax = 110;
-        public static double xpantMin = 0; // X_MIN
-        public static double ypantMin = 0; // Y_MIN
-        public static double xpantMax = 0; // X_MAX
-        public static double ypantMax = 0; // Y_MAX
+        //TODO ESTO SERAN ENUMS EN LA CLASE UTILS DE MI TRABAJO
+        public const int SEN = 0;
+        public const int COS = 1;
+        public const int EXPONENCIAL = 2;
+        public const int PRODUCTO = 3;
+        public const int CUADRATICA = 4;
+        public const int FRACCIONARIA = 5;
+
+
+        public static int numFunction = 0;
+
+        public static Boolean entered = false;
         public double ScaleRate = 1.1;
-        public ScaleTransform scaleTransform = new ScaleTransform();      //---------> object for Scale-Transform                         //-------------> scaleRate that has to be Zoom for each point of Mouse_Wheel
+        public ScaleTransform scaleTransform = new ScaleTransform();      //---------> object for Scale-Transform //-------------> scaleRate that has to be Zoom for each point of Mouse_Wheel
         public bool added;
 
         public MainWindow()
@@ -47,14 +52,11 @@ namespace Ejercicio4
         {
             // OJO BORRA TODO LO ANTERIOR 
             lienzo.Children.Clear();
-
+            if (numFunction > 0)
+                numFunction++;
+            else if (numFunction >= FRACCIONARIA)
+                numFunction = 0;
             DrawGraphic();
-
-
-            // OJO hacer un evento en EL TRABAJO FINAL QUE REDIBUJE CADA VEZ QUE SE HAGA LA VISTA
-            // PORQUE SINO CUANDO AUMENTAS O DISMINUYES EL TAMAÑO DE LA VENTANA TIENES QUE VOLVER
-            // A DARLE AL BOTON DE DIBUJAR PARA QUE RECALCULE TODO.
-
         }
 
         private void DrawAxis()
@@ -65,16 +67,17 @@ namespace Ejercicio4
             ejex.Stroke = Brushes.Black;
             ejey.Stroke = Brushes.Black;
 
-            // X1 es el inicio y X2 el final
-            ejex.X1 = xpantMin;
-            ejex.X2 = xpantMax;
-            ejex.Y1 = (ypantMin - ypantMax) * ((0 - yrealMin) / (yrealMax - yrealMin)) + ypantMax;
-            ejex.Y2 = (ypantMin - ypantMax) * ((0 - yrealMin) / (yrealMax - yrealMin)) + ypantMax;
+            // EJE X
+            ejex.X1 = 0;
+            ejex.X2 = pant.XMax;
+            ejex.Y1 = ConvertYFromRealToPant(0,0);
+            ejex.Y2 = ConvertYFromRealToPant(0, 0);
 
-            ejey.X1 = xpantMax / 2;
-            ejey.X2 = xpantMax / 2;
-            ejey.Y1 = ypantMin;
-            ejey.Y2 = ypantMax;
+            // EJE Y
+            ejey.Y1 = 0;
+            ejey.Y2 = pant.YMax;
+            ejey.X1 = ConvertXFromRealToPant(0, 0);
+            ejey.X2 = ConvertXFromRealToPant(0, 0);
 
             lienzo.Children.Add(ejex);
             lienzo.Children.Add(ejey);
@@ -86,20 +89,22 @@ namespace Ejercicio4
             Polyline polilinea = new Polyline();
             double xreal, yreal, xpant, ypant;
             int numpuntos;
-        
-            xpantMax = lienzo.ActualWidth;
-            ypantMax = lienzo.ActualHeight;
-            numpuntos = (int)xpantMax;
+
+            entered = true;
+
+            DeclareFuncRect();
+
+            numpuntos = (int)pant.XMax;
 
             polilinea.Stroke = Brushes.Red;
 
             for (int i = 0; i < numpuntos; i++)
             {
-                xreal = xrealMin + i * (xrealMax - xrealMin) / numpuntos;
-                yreal = xreal * xreal; // x^2
+                xreal = real.XMin + i * (real.XMax - real.XMin) / numpuntos;
+                yreal = SwitchFunctionFromButton(xreal);
 
-                xpant = (xpantMax - xpantMin) * ((xreal - xrealMin) / (xrealMax - xrealMin)) + xpantMin;
-                ypant = (ypantMin - ypantMax) * ((yreal - yrealMin) / (yrealMax - yrealMin)) + ypantMax;
+                xpant = ConvertXFromRealToPant(xreal, pant.XMin);
+                ypant = ConvertYFromRealToPant(yreal, pant.YMin);
 
                 Point punto = new Point(xpant, ypant);
                 puntos.Add(punto);
@@ -111,26 +116,77 @@ namespace Ejercicio4
             DrawAxis();
         }
 
-        private double ConvertXFromRealToPant(PointCollection pts, double xRealFunctionValue)
+        private double SwitchFunctionFromButton(double xreal)
         {
-            //return ( (xpantMax - xpantMin) * ((xreal - xrealMin) / (xrealMax - xrealMin)) + xpantMin );
-            double value = ( (pts[PANT_MAX_INDEX].X - pts[PANT_MIN_INDEX].X) * ((xRealFunctionValue - pts[REAL_MIN_INDEX].X) / (pts[REAL_MAX_INDEX].X - pts[REAL_MIN_INDEX].X) + pts[PANT_MIN_INDEX].X) );
-            Console.WriteLine("XfroMrealtoPant: {0}", value);
-            return value;
+            double a = 12;
+            double b = 3;
+            double c = 4;
+
+            switch (numFunction)
+            {
+                case CUADRATICA:
+                    return a * Math.Pow(xreal, 2) + b * xreal + c;
+                    break;
+                case SEN:
+                    numFunction++;
+                    return a * Math.Sin(b * xreal); // x^2
+                    break;
+                case COS:
+                    return a * Math.Cos(b * xreal);
+                    break;
+                case EXPONENCIAL:
+                    return a * Math.Pow(xreal, b);
+                    break;
+                case PRODUCTO:
+                    return a * xreal + b;
+                    break;
+                case FRACCIONARIA:
+                    return a / (b * xreal);
+                    break;
+                default:
+                    return xreal* xreal; // x^2
+            }
+
+            return 0;
         }
 
-        private double ConvertYFromRealToPant(PointCollection pts, double yRealFunctionValue)
+        private double ConvertXFromRealToPant(double xreal, double width)
         {
-            //return (ypantMin - ypantMax) * ((yreal - yrealMin) / (yrealMax - yrealMin)) + ypantMax;
-            double value = ( (pts[PANT_MIN_INDEX].Y - pts[PANT_MAX_INDEX].Y) * ((yRealFunctionValue - pts[REAL_MIN_INDEX].Y) / (pts[REAL_MAX_INDEX].Y - pts[REAL_MIN_INDEX].Y) + pts[PANT_MAX_INDEX].Y) );
-            Console.WriteLine("YfroMrealtoPant: {0}", value);
-            return value;
+            return (pant.XMax - width) * ((xreal - real.XMin) / (real.XMax - real.XMin)) + pant.XMin;
+        }
+
+        private double ConvertYFromRealToPant(double yreal, double height)
+        {
+            return (height - pant.YMax) * ((yreal - real.YMin) / (real.YMax - real.YMin)) + pant.YMax;
+        }
+
+        private double ConvertXFromPantToReal(double xpant, double width)
+        {
+            return (real.XMax - width) * ((xpant - pant.XMin) / (pant.XMax - pant.XMin)) + real.XMin;
+        }
+
+        private double ConvertYFromPantToReal(double ypant, double height)
+        {
+            return (height - real.YMax) * ((ypant - pant.YMin) / (pant.YMax - pant.YMin)) + real.YMax;
+        }
+
+        private void DeclareFuncRect()
+        {
+            real.XMin = -10;
+            real.YMin = -10;
+            real.XMax = 10;
+            real.YMax = 10;
+
+            pant.XMin = pant.YMin = 0;
+            pant.XMax = lienzo.ActualWidth;
+            pant.YMax = lienzo.ActualHeight; 
         }
 
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             lienzo.Children.Clear();
-            DrawGraphic();
+            if (entered)
+                DrawGraphic();
         }
 
         private void Canvas_MouseWheel(object sender, MouseWheelEventArgs e)
@@ -158,8 +214,9 @@ namespace Ejercicio4
             }
         }
 
-        Point _last;
-        bool isDragged;
+        Point _last, onCanvas, posOnWindow;
+        bool isDragged, isDragging;
+
         void theGrid_MouseMove(object sender, MouseEventArgs e)
         {
             if (isDragged == false)
@@ -175,6 +232,13 @@ namespace Ejercicio4
                 mt.Matrix = matrix;
                 _last = pos;
             }
+
+            posOnWindow = Mouse.GetPosition(lienzo);
+            onCanvas.X = double.Parse(string.Format("{0:n2}", (ConvertXFromPantToReal(posOnWindow.X, lienzo.ActualWidth) * 100) / 100));
+            onCanvas.Y = double.Parse(string.Format("{0:n2}", (ConvertYFromPantToReal(posOnWindow.Y, lienzo.ActualHeight) * 100) / 100));
+            XPositonLabel.Content = ConvertXFromPantToReal(posOnWindow.X, lienzo.ActualWidth);
+            YPositonLabel.Content = posOnWindow.X;
+            
         }
 
         void theGrid_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -186,9 +250,10 @@ namespace Ejercicio4
         void theGrid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             theGrid.CaptureMouse();
-            //_last = e.GetPosition(canvas);
             _last = e.GetPosition(theGrid);
             isDragged = true;
         }
+
+      
     }
 }
