@@ -63,15 +63,22 @@ namespace Ejercicio4
         {
             Line ejex = new Line();
             Line ejey = new Line();
+            Line axisStrip = new Line();
+
+            double distancia = 0.333;
+            double pos = real.XMin;
+            double length1 = -0.25, length2 = 0.25;
+            int counter;
 
             ejex.Stroke = Brushes.Black;
             ejey.Stroke = Brushes.Black;
+
 
             // EJE X
             ejex.X1 = 0;
             ejex.X2 = pant.XMax;
             ejex.Y1 = ConvertYFromRealToPant(0,0);
-            ejex.Y2 = ConvertYFromRealToPant(0, 0);
+            ejex.Y2 = ConvertYFromRealToPant(0,0);
 
             // EJE Y
             ejey.Y1 = 0;
@@ -81,6 +88,77 @@ namespace Ejercicio4
 
             lienzo.Children.Add(ejex);
             lienzo.Children.Add(ejey);
+
+            /* Hay que mejorar la implementación de esto EJE X */
+            counter = 6;
+            for (int i = 0; pos < 10; i++)
+            {
+                // Altura de la raya de -0.5 a 0.5
+                if (counter == 6)
+                {
+                    length1 = -0.5;
+                    length2 = 0.5;
+                    counter = 0;
+                } else
+                {
+                    length1 = -0.25;
+                    length2 = 0.25;
+                }
+
+                axisStrip.X1 = ConvertXFromRealToPant(pos, pant.XMin);  
+                axisStrip.X2 = ConvertXFromRealToPant(pos, pant.XMin);
+                axisStrip.Y1 = ConvertYFromRealToPant(length1, pant.YMin);
+                axisStrip.Y2 = ConvertYFromRealToPant(length2, pant.YMin);
+
+                //Console.WriteLine("AXIS {4}: X1:{0} X2:{1} Y1:{2} Y2:{3} POS: {5}", axisStrip.X1, axisStrip.X2, axisStrip.Y1, axisStrip.Y2, i, pos);
+
+                lienzo.Children.Add(axisStrip);
+
+                pos += distancia;
+                axisStrip = new Line();
+                axisStrip.Stroke = Brushes.Black;
+                counter++;
+
+            }
+
+            /* Hay que mejorar la implementación de esto EJE Y */
+            counter = 6;
+            pos = -10;
+            axisStrip = new Line();
+            axisStrip.Stroke = Brushes.Black;
+            for (int i = 0; pos < 10; i++)
+            {
+                // Altura de la raya de -0.5 a 0.5
+                if (counter == 6)
+                {
+                    length1 = -0.5;
+                    length2 = 0.5;
+                    counter = 0;
+                }
+                else
+                {
+                    length1 = -0.25;
+                    length2 = 0.25;
+                }
+
+                axisStrip.X1 = ConvertXFromRealToPant(length1, pant.XMin);
+                axisStrip.X2 = ConvertXFromRealToPant(length2, pant.XMin);
+                axisStrip.Y1 = ConvertYFromRealToPant(pos, pant.YMin);
+                axisStrip.Y2 = ConvertYFromRealToPant(pos, pant.YMin);
+
+                Console.WriteLine("AXIS {4}: X1:{0} X2:{1} Y1:{2} Y2:{3} POS: {5}", axisStrip.X1, axisStrip.X2, axisStrip.Y1, axisStrip.Y2, i, pos);
+
+                lienzo.Children.Add(axisStrip);
+
+                pos += distancia;
+                axisStrip = new Line();
+                axisStrip.Stroke = Brushes.Black;
+                counter++;
+
+            }
+
+
+
         }
 
         private void DrawGraphic()
@@ -98,13 +176,16 @@ namespace Ejercicio4
 
             polilinea.Stroke = Brushes.Red;
 
-            for (int i = 0; i < numpuntos; i++)
+            for (int i = 0; i <= numpuntos; i++) // OJOOOOOOOOOOOOOO Aqui he cambiado el < por <= para que llegue de -10 a 10 y no de -10 a 9.66 por ejemplo
             {
                 xreal = real.XMin + i * (real.XMax - real.XMin) / numpuntos;
                 yreal = SwitchFunctionFromButton(xreal);
 
                 xpant = ConvertXFromRealToPant(xreal, pant.XMin);
                 ypant = ConvertYFromRealToPant(yreal, pant.YMin);
+
+                /* OJO QUITAR DE PROPIEDADES LA CONSOLA -> BOTON DEREECHO PROYECTO CONSOLA*/
+                //Console.WriteLine("Xreal:{0} Yreal:{1} Xpant:{2} Ypant:{3}", xreal, yreal, xpant, ypant);
 
                 Point punto = new Point(xpant, ypant);
                 puntos.Add(punto);
@@ -126,28 +207,20 @@ namespace Ejercicio4
             {
                 case CUADRATICA:
                     return a * Math.Pow(xreal, 2) + b * xreal + c;
-                    break;
                 case SEN:
                     numFunction++;
                     return a * Math.Sin(b * xreal); // x^2
-                    break;
                 case COS:
                     return a * Math.Cos(b * xreal);
-                    break;
                 case EXPONENCIAL:
                     return a * Math.Pow(xreal, b);
-                    break;
                 case PRODUCTO:
                     return a * xreal + b;
-                    break;
                 case FRACCIONARIA:
                     return a / (b * xreal);
-                    break;
                 default:
                     return xreal* xreal; // x^2
             }
-
-            return 0;
         }
 
         private double ConvertXFromRealToPant(double xreal, double width)
@@ -162,12 +235,12 @@ namespace Ejercicio4
 
         private double ConvertXFromPantToReal(double xpant, double width)
         {
-            return (real.XMax - width) * ((xpant - pant.XMin) / (pant.XMax - pant.XMin)) + real.XMin;
+            return ((pant.XMax - pant.XMin) * xpant / width) + pant.XMin;
         }
 
         private double ConvertYFromPantToReal(double ypant, double height)
         {
-            return (height - real.YMax) * ((ypant - pant.YMin) / (pant.YMax - pant.YMin)) + real.YMax;
+            return pant.YMin - ((pant.YMax - pant.YMin) * (ypant - height) / height);
         }
 
         private void DeclareFuncRect()
@@ -215,7 +288,16 @@ namespace Ejercicio4
         }
 
         Point _last, onCanvas, posOnWindow;
-        bool isDragged, isDragging;
+        bool isDragged;
+
+        private void lienzo_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Panel MousePanel = (Panel)sender;
+            Point p = e.GetPosition(lienzo);
+
+            XPositonLabel.Content = (string.Format("{0:n2}", (ConvertXFromPantToReal(p.X, lienzo.ActualWidth) * 100) / 100)); ;
+            YPositonLabel.Content = (string.Format("{0:n2}", (ConvertYFromPantToReal(p.Y, lienzo.ActualHeight) * 100) / 100));
+        }
 
         void theGrid_MouseMove(object sender, MouseEventArgs e)
         {
@@ -232,12 +314,6 @@ namespace Ejercicio4
                 mt.Matrix = matrix;
                 _last = pos;
             }
-
-            posOnWindow = Mouse.GetPosition(lienzo);
-            onCanvas.X = double.Parse(string.Format("{0:n2}", (ConvertXFromPantToReal(posOnWindow.X, lienzo.ActualWidth) * 100) / 100));
-            onCanvas.Y = double.Parse(string.Format("{0:n2}", (ConvertYFromPantToReal(posOnWindow.Y, lienzo.ActualHeight) * 100) / 100));
-            XPositonLabel.Content = ConvertXFromPantToReal(posOnWindow.X, lienzo.ActualWidth);
-            YPositonLabel.Content = posOnWindow.X;
             
         }
 

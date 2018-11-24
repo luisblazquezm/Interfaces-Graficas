@@ -63,8 +63,9 @@ namespace Guion1_Ventanas
         private void OnlyNumbersBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             // ^-?[0-9]+$|^-?[0-9]*.?[0-9]$
-            Regex reg = new Regex(@"^-?[0-9]*(?:\.[0-9]*)?$");
-            if (reg.IsMatch(e.Text) && !(e.Text == "." && ((TextBox)sender).Text.Contains(e.Text)) && !(e.Text == "-" && ((TextBox)sender).Text.Contains(e.Text)))
+            // ^-?[0-9]*(?:\.[0-9]*)?$
+            Regex reg = new Regex(@"^-?[0-9]*(\.[0-9]*)?$");
+            if (reg.IsMatch(e.Text) && !(e.Text == "." && ((TextBox)sender).Text.Contains(e.Text)) && !(e.Text.StartsWith("-") && ((TextBox)sender).Text.Contains(e.Text)))
                 e.Handled = false;
             else
                 e.Handled = true;
