@@ -56,4 +56,5 @@ namespace ConversorEuroDolar
                 e.Handled = true;
             }
         }
+    }
 }

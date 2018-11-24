@@ -59,16 +59,53 @@ namespace Guion1_Ventanas
             tableGrid.ItemsSource = obj;
         }
 
+        private static readonly Regex _regex = new Regex("[^0-9.-]+"); //regex that matches disallowed text
+        Boolean numberFirst = false;
+        private static bool IsTextAllowed(string text)
+        {
+            return !_regex.IsMatch(text);
+        }
 
         private void OnlyNumbersBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            // ^-?[0-9]+$|^-?[0-9]*.?[0-9]$
-            // ^-?[0-9]*(?:\.[0-9]*)?$
+
             Regex reg = new Regex(@"^-?[0-9]*(\.[0-9]*)?$");
-            if (reg.IsMatch(e.Text) && !(e.Text == "." && ((TextBox)sender).Text.Contains(e.Text)) && !(e.Text.StartsWith("-") && ((TextBox)sender).Text.Contains(e.Text)))
+
+            if (Char.IsDigit(e.Text[0]))
+            {
+                Console.WriteLine("JA");
+                numberFirst = true;
+            } else
+            {
+                if ((e.Text[0]).Equals('-') && numberFirst)
+                {
+                    Console.WriteLine("JAJA");
+                    e.Handled = false;
+                }
+                else
+                {
+                    Console.WriteLine("JAAJAJAJA");
+                    if ((reg.IsMatch(e.Text) && !(e.Text == "." && ((TextBox)sender).Text.Contains(e.Text)) && !(e.Text == "-" && ((TextBox)sender).Text.Contains(e.Text))))
+                        e.Handled = false;
+                    else
+                        e.Handled = true;
+                }
+            }
+
+
+
+
+            // ^-?[0-9]+$|^-?[0-9]*.?[0-9]$
+            // ^-?[0-9]+(?:\.[0-9]*)?$
+            /*
+            Regex reg = new Regex(@"^-[0-9]*(\.[0-9]*)?$");
+
+            if ((reg.IsMatch(e.Text) && !(e.Text == "." && ((TextBox)sender).Text.Contains(e.Text)) && !(e.Text == "-" && ((TextBox)sender).Text.Contains(e.Text))))
                 e.Handled = false;
             else
                 e.Handled = true;
+            
+            */
             //e.Handled = !reg.IsMatch((sender as TextBox).Text.Insert((sender as TextBox).SelectionStart, e.Text));
         }
     }

@@ -146,8 +146,6 @@ namespace Ejercicio4
                 axisStrip.Y1 = ConvertYFromRealToPant(pos, pant.YMin);
                 axisStrip.Y2 = ConvertYFromRealToPant(pos, pant.YMin);
 
-                Console.WriteLine("AXIS {4}: X1:{0} X2:{1} Y1:{2} Y2:{3} POS: {5}", axisStrip.X1, axisStrip.X2, axisStrip.Y1, axisStrip.Y2, i, pos);
-
                 lienzo.Children.Add(axisStrip);
 
                 pos += distancia;
@@ -235,12 +233,12 @@ namespace Ejercicio4
 
         private double ConvertXFromPantToReal(double xpant, double width)
         {
-            return ((pant.XMax - pant.XMin) * xpant / width) + pant.XMin;
+            return (real.XMax - real.XMin) * ((xpant - pant.XMin) / (pant.XMax - pant.XMin)) + real.XMin;
         }
 
         private double ConvertYFromPantToReal(double ypant, double height)
         {
-            return pant.YMin - ((pant.YMax - pant.YMin) * (ypant - height) / height);
+            return (real.YMax - real.YMin) * ((ypant - pant.YMax) / (pant.YMin - pant.YMax)) + real.YMin ;
         }
 
         private void DeclareFuncRect()
@@ -295,8 +293,10 @@ namespace Ejercicio4
             Panel MousePanel = (Panel)sender;
             Point p = e.GetPosition(lienzo);
 
-            XPositonLabel.Content = (string.Format("{0:n2}", (ConvertXFromPantToReal(p.X, lienzo.ActualWidth) * 100) / 100)); ;
-            YPositonLabel.Content = (string.Format("{0:n2}", (ConvertYFromPantToReal(p.Y, lienzo.ActualHeight) * 100) / 100));
+            Console.WriteLine("Position Mouse Canvas X:{0} Y:{1}", p.X, p.Y);
+
+            XPositonLabel.Content = ConvertXFromPantToReal(p.X, lienzo.ActualWidth); //(string.Format("{0:n2}", (ConvertXFromPantToReal(p.X, lienzo.ActualWidth) * 100) / 100)); 
+            YPositonLabel.Content = ConvertYFromPantToReal(p.Y, lienzo.ActualHeight); //(string.Format("{0:n2}", (ConvertYFromPantToReal(p.Y, lienzo.ActualHeight) * 100) / 100));
         }
 
         void theGrid_MouseMove(object sender, MouseEventArgs e)
