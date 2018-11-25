@@ -41,6 +41,8 @@ namespace Ejercicio4
         public double ScaleRate = 1.1;
         public ScaleTransform scaleTransform = new ScaleTransform();      //---------> object for Scale-Transform //-------------> scaleRate that has to be Zoom for each point of Mouse_Wheel
         public bool added;
+        Point _last;
+        bool isDragged;
 
         public MainWindow()
         {
@@ -63,12 +65,13 @@ namespace Ejercicio4
         {
             Line ejex = new Line();
             Line ejey = new Line();
-            Line axisStrip = new Line();
+            //Line axisStrip = new Line();
 
             double distancia = 0.333;
             double pos = real.XMin;
-            double length1 = -0.25, length2 = 0.25;
-            int counter;
+            //double length1 = -0.25, length2 = 0.25;
+            Boolean axisHorizontal;
+            //int counter;
 
             ejex.Stroke = Brushes.Black;
             ejey.Stroke = Brushes.Black;
@@ -89,7 +92,12 @@ namespace Ejercicio4
             lienzo.Children.Add(ejex);
             lienzo.Children.Add(ejey);
 
-            /* Hay que mejorar la implementación de esto EJE X */
+            axisHorizontal = true;
+            DrawAxisLines(real.XMin, real.XMax, distancia, axisHorizontal); // Para X
+            axisHorizontal = false;
+            DrawAxisLines(real.XMin, real.XMax, distancia, axisHorizontal); // Para Y
+
+            /*
             counter = 6;
             for (int i = 0; pos < 10; i++)
             {
@@ -121,7 +129,7 @@ namespace Ejercicio4
 
             }
 
-            /* Hay que mejorar la implementación de esto EJE Y */
+            
             counter = 6;
             pos = -10;
             axisStrip = new Line();
@@ -154,9 +162,50 @@ namespace Ejercicio4
                 counter++;
 
             }
+            */
 
 
+        }
 
+        private void DrawAxisLines(double actualPos, double maxLimit, double distancia, Boolean axisHorizontal)
+        {
+            int counter = 6;
+            Line line = new Line { Stroke = Brushes.Black };
+            double length1, length2;
+
+            while (actualPos < maxLimit)
+            {
+                // Altura de la raya de -0.5 a 0.5
+                if (counter == 6)
+                {
+                    length1 = -0.5;
+                    length2 = 0.5;
+                    counter = 0;
+                }
+                else
+                {
+                    length1 = -0.25;
+                    length2 = 0.25;
+                }
+
+                if (axisHorizontal) {
+                    line.X1 = ConvertXFromRealToPant(actualPos, pant.XMin);
+                    line.X2 = ConvertXFromRealToPant(actualPos, pant.XMin);
+                    line.Y1 = ConvertYFromRealToPant(length1, pant.YMin);
+                    line.Y2 = ConvertYFromRealToPant(length2, pant.YMin);
+                } else {
+                    line.X1 = ConvertXFromRealToPant(length1, pant.XMin);
+                    line.X2 = ConvertXFromRealToPant(length2, pant.XMin);
+                    line.Y1 = ConvertYFromRealToPant(actualPos, pant.YMin);
+                    line.Y2 = ConvertYFromRealToPant(actualPos, pant.YMin);
+                }
+                    
+                lienzo.Children.Add(line);
+
+                actualPos += distancia;
+                line = new Line { Stroke = Brushes.Black };
+                counter++;
+            }
         }
 
         private void DrawGraphic()
@@ -285,8 +334,6 @@ namespace Ejercicio4
             }
         }
 
-        Point _last, onCanvas, posOnWindow;
-        bool isDragged;
 
         private void lienzo_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -295,8 +342,18 @@ namespace Ejercicio4
 
             Console.WriteLine("Position Mouse Canvas X:{0} Y:{1}", p.X, p.Y);
 
-            XPositonLabel.Content = ConvertXFromPantToReal(p.X, lienzo.ActualWidth); //(string.Format("{0:n2}", (ConvertXFromPantToReal(p.X, lienzo.ActualWidth) * 100) / 100)); 
-            YPositonLabel.Content = ConvertYFromPantToReal(p.Y, lienzo.ActualHeight); //(string.Format("{0:n2}", (ConvertYFromPantToReal(p.Y, lienzo.ActualHeight) * 100) / 100));
+            XPositonLabel.Content = ConvertXFromPantToReal(p.X, lienzo.ActualWidth); 
+            YPositonLabel.Content = ConvertYFromPantToReal(p.Y, lienzo.ActualHeight);
+        }
+
+        private void clipBorder_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Mouse.OverrideCursor = Cursors.Cross;
+        }
+
+        private void clipBorder_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Mouse.OverrideCursor = Cursors.Arrow;
         }
 
         void theGrid_MouseMove(object sender, MouseEventArgs e)
