@@ -48,16 +48,14 @@ namespace Ejercicio4
         {
             InitializeComponent();
             lienzo.MouseWheel += new MouseWheelEventHandler(Canvas_MouseWheel);
+            this.SizeChanged += Window_SizeChanged;
         }
 
         private void DrawButton_Click(object sender, RoutedEventArgs e)
         {
             // OJO BORRA TODO LO ANTERIOR 
             lienzo.Children.Clear();
-            if (numFunction > 0)
-                numFunction++;
-            else if (numFunction >= FRACCIONARIA)
-                numFunction = 0;
+            numFunction = EXPONENCIAL;
             DrawGraphic();
         }
 
@@ -93,10 +91,12 @@ namespace Ejercicio4
             lienzo.Children.Add(ejey);
 
             axisHorizontal = true;
-            DrawAxisLines(real.XMin, real.XMax, distancia, axisHorizontal); // Para X
-            axisHorizontal = false;
-            DrawAxisLines(real.XMin, real.XMax, distancia, axisHorizontal); // Para Y
+            foreach(Line l in DrawAxisLines(real.XMin, real.XMax, distancia, axisHorizontal)) // Para X
+                lienzo.Children.Add(l);
 
+            axisHorizontal = false;
+            foreach (Line l in DrawAxisLines(real.XMin, real.XMax, distancia, axisHorizontal)) // Para Y
+                lienzo.Children.Add(l);
             /*
             counter = 6;
             for (int i = 0; pos < 10; i++)
@@ -167,9 +167,10 @@ namespace Ejercicio4
 
         }
 
-        private void DrawAxisLines(double actualPos, double maxLimit, double distancia, Boolean axisHorizontal)
+        private List<Line> DrawAxisLines(double actualPos, double maxLimit, double distancia, Boolean axisHorizontal)
         {
             int counter = 6;
+            List<Line> listOflines = new List<Line>();
             Line line = new Line { Stroke = Brushes.Black };
             double length1, length2;
 
@@ -199,20 +200,23 @@ namespace Ejercicio4
                     line.Y1 = ConvertYFromRealToPant(actualPos, pant.YMin);
                     line.Y2 = ConvertYFromRealToPant(actualPos, pant.YMin);
                 }
-                    
-                lienzo.Children.Add(line);
+
+                listOflines.Add(line);
 
                 actualPos += distancia;
                 line = new Line { Stroke = Brushes.Black };
                 counter++;
             }
+
+            return listOflines;
         }
 
         private void DrawGraphic()
         {
+            List<PointCollection> PointCollectionList = new List<PointCollection>();
             PointCollection puntos = new PointCollection();
             Polyline polilinea = new Polyline();
-            double xreal, yreal, xpant, ypant;
+            double xreal, yreal, xpant, ypant, oldXReal;
             int numpuntos;
 
             entered = true;
@@ -222,8 +226,46 @@ namespace Ejercicio4
             numpuntos = (int)pant.XMax;
 
             polilinea.Stroke = Brushes.Red;
+            // Xreal  = de -10  a 0 y de 0 a 10
 
-            for (int i = 0; i <= numpuntos; i++) // OJOOOOOOOOOOOOOO Aqui he cambiado el < por <= para que llegue de -10 a 10 y no de -10 a 9.66 por ejemplo
+            int i = 0;
+            int j = 0;
+            int limit = 0;
+            while (j < 2) { 
+
+                do {
+                    i++;
+                    xreal = real.XMin + i * (real.XMax - real.XMin) / numpuntos;
+                    Console.WriteLine("Xreal {0}", xreal);
+                    yreal = SwitchFunctionFromButton(xreal);
+
+                    xpant = ConvertXFromRealToPant(xreal, pant.XMin);
+                    ypant = ConvertYFromRealToPant(yreal, pant.YMin);
+
+                    Point punto = new Point(xpant, ypant);
+                    puntos.Add(punto);
+                } while (Convert.ToInt32(xreal) < limit);
+
+                PointCollectionList.Add(puntos);
+                puntos = new PointCollection();
+
+                j++;
+
+                Console.WriteLine("Antes {0}",xreal);
+                oldXReal = xreal;
+                xreal += 1;
+                limit = (int)real.XMax;
+                Console.WriteLine("Despues {0}", xreal);
+                i = (int) (-(real.XMin) * numpuntos/(real.XMax - real.XMin));
+                Console.WriteLine("i {0}", i);
+
+            }
+
+            
+
+            /*
+
+            do
             {
                 xreal = real.XMin + i * (real.XMax - real.XMin) / numpuntos;
                 yreal = SwitchFunctionFromButton(xreal);
@@ -231,15 +273,49 @@ namespace Ejercicio4
                 xpant = ConvertXFromRealToPant(xreal, pant.XMin);
                 ypant = ConvertYFromRealToPant(yreal, pant.YMin);
 
-                /* OJO QUITAR DE PROPIEDADES LA CONSOLA -> BOTON DEREECHO PROYECTO CONSOLA*/
-                //Console.WriteLine("Xreal:{0} Yreal:{1} Xpant:{2} Ypant:{3}", xreal, yreal, xpant, ypant);
+                Point punto = new Point(xpant, ypant);
+                puntos.Add(punto);
+                i++;
+            } while (xreal < real.XMax);
+
+            polilinea2.Points = new PointCollection(puntos);
+            lienzo.Children.Add(polilinea2);
+            
+            
+            for (int i = 0; i <= numpuntos; i++) // OJOOOOOOOOOOOOOO Aqui he cambiado el < por <= para que llegue de -10 a 10 y no de -10 a 9.66 por ejemplo
+            {
+                xreal = real.XMin + i * (real.XMax - real.XMin) / numpuntos;
+                yreal = SwitchFunctionFromButton(xreal);
+
+
+                if ((Convert.ToInt32(xreal)) == 0)
+                {
+                    Console.WriteLine(xreal);
+                    i++;
+                    i++;
+                    xreal = real.XMin + i * (real.XMax - real.XMin) / numpuntos;
+                }
+
+                xpant = ConvertXFromRealToPant(xreal, pant.XMin);
+                ypant = ConvertYFromRealToPant(yreal, pant.YMin);
 
                 Point punto = new Point(xpant, ypant);
                 puntos.Add(punto);
             }
+            
 
-            polilinea.Points = new PointCollection(puntos);
-            lienzo.Children.Add(polilinea);
+            polilinea1.Points = new PointCollection(puntos);
+            lienzo.Children.Add(polilinea1);
+            */
+
+            foreach(PointCollection p in PointCollectionList)
+            {
+                lienzo.Children.Add(new Polyline()
+                {
+                    Points = p,
+                    Stroke = Brushes.Black
+                });
+            }
 
             DrawAxis();
         }
@@ -247,7 +323,7 @@ namespace Ejercicio4
         private double SwitchFunctionFromButton(double xreal)
         {
             double a = 12;
-            double b = 3;
+            double b = -5;
             double c = 4;
 
             switch (numFunction)
@@ -324,7 +400,7 @@ namespace Ejercicio4
 
             if (!added)
             {
-                TransformGroup tg = lienzo.RenderTransform as TransformGroup;
+                TransformGroup tg = (TransformGroup)lienzo.RenderTransform;
                 if (tg != null)
                 {
                     tg.Children.Add(scaleTransform);
@@ -356,6 +432,38 @@ namespace Ejercicio4
             Mouse.OverrideCursor = Cursors.Arrow;
         }
 
+        private void theGrid_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragged == false)
+                return;
+
+            base.OnMouseMove(e);
+            if (e.LeftButton == MouseButtonState.Pressed && theGrid.IsMouseCaptured)
+            {
+
+                var pos = e.GetPosition(theGrid);
+                var matrix = mt.Matrix;
+                matrix.Translate(pos.X - _last.X, pos.Y - _last.Y);
+                mt.Matrix = matrix;
+                _last = pos;
+            }
+
+        }
+
+        private void theGrid_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            theGrid.ReleaseMouseCapture();
+            isDragged = false;
+        }
+
+        private void theGrid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            theGrid.CaptureMouse();
+            _last = e.GetPosition(theGrid);
+            isDragged = true;
+        }
+
+        /*
         void theGrid_MouseMove(object sender, MouseEventArgs e)
         {
             if (isDragged == false)
@@ -386,7 +494,7 @@ namespace Ejercicio4
             _last = e.GetPosition(theGrid);
             isDragged = true;
         }
+        */
 
-      
     }
 }

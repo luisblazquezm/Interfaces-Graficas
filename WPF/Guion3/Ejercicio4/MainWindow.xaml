@@ -34,13 +34,13 @@
             <Label Name="YPositonLabel" Width="80" Height="30" Grid.Column="3" Grid.Row="1" BorderBrush="Black" BorderThickness="1" VerticalAlignment="Top" Margin="15" HorizontalAlignment="Center"/>
         </Grid>
 
-        <Border x:Name="clipBorder" BorderThickness="2" BorderBrush="Black" ClipToBounds="True" Margin="10,120,10,10" MouseLeftButtonDown="theGrid_MouseLeftButtonDown"
-           MouseLeftButtonUp="theGrid_MouseLeftButtonUp"
-           MouseMove="theGrid_MouseMove"
+        <Border x:Name="clipBorder" BorderThickness="2" BorderBrush="Black" ClipToBounds="True" Margin="10,120,10,10" 
            MouseEnter="clipBorder_MouseEnter"
            MouseLeave="clipBorder_MouseLeave">
             
-            <Canvas x:Name="lienzo" Background="Transparent" MouseWheel="Canvas_MouseWheel" Margin="8" RenderTransformOrigin="0.5,0.5" MouseLeftButtonDown="lienzo_MouseLeftButtonDown">
+            <Canvas x:Name="lienzo" Background="Transparent" 
+                 MouseWheel="Canvas_MouseWheel" Margin="8" RenderTransformOrigin="0.5,0.5" 
+                 MouseLeftButtonDown="lienzo_MouseLeftButtonDown">
                 <Canvas.RenderTransform>
                     <TransformGroup>
                         <MatrixTransform x:Name="mt"/>
