@@ -55,7 +55,7 @@ namespace Ejercicio4
         {
             // OJO BORRA TODO LO ANTERIOR 
             lienzo.Children.Clear();
-            numFunction = EXPONENCIAL;
+            numFunction = COS;
             DrawGraphic();
         }
 
@@ -65,7 +65,7 @@ namespace Ejercicio4
             Line ejey = new Line();
             //Line axisStrip = new Line();
 
-            double distancia = 0.333;
+            double distancia = 0.167;
             double pos = real.XMin;
             //double length1 = -0.25, length2 = 0.25;
             Boolean axisHorizontal;
@@ -173,6 +173,9 @@ namespace Ejercicio4
             List<Line> listOflines = new List<Line>();
             Line line = new Line { Stroke = Brushes.Black };
             double length1, length2;
+            TextBlock textB;
+            int varia = -6;
+            
 
             while (actualPos < maxLimit)
             {
@@ -181,7 +184,6 @@ namespace Ejercicio4
                 {
                     length1 = -0.5;
                     length2 = 0.5;
-                    counter = 0;
                 }
                 else
                 {
@@ -194,6 +196,17 @@ namespace Ejercicio4
                     line.X2 = ConvertXFromRealToPant(actualPos, pant.XMin);
                     line.Y1 = ConvertYFromRealToPant(length1, pant.YMin);
                     line.Y2 = ConvertYFromRealToPant(length2, pant.YMin);
+
+                    if (counter == 6) {
+                        counter = 0;
+                        varia++;
+                        textB = new TextBlock();
+
+                        textB.Text = Convert.ToString(varia);
+                        Canvas.SetLeft(textB, line.X1);
+                        Canvas.SetTop(textB, line.Y1);
+                        lienzo.Children.Add(textB);
+                    }
                 } else {
                     line.X1 = ConvertXFromRealToPant(length1, pant.XMin);
                     line.X2 = ConvertXFromRealToPant(length2, pant.XMin);
@@ -216,7 +229,7 @@ namespace Ejercicio4
             List<PointCollection> PointCollectionList = new List<PointCollection>();
             PointCollection puntos = new PointCollection();
             Polyline polilinea = new Polyline();
-            double xreal, yreal, xpant, ypant, oldXReal;
+            double xreal, yreal, xpant, ypant;
             int numpuntos;
 
             entered = true;
@@ -227,10 +240,7 @@ namespace Ejercicio4
 
             polilinea.Stroke = Brushes.Red;
             // Xreal  = de -10  a 0 y de 0 a 10
-
-            int i = 0;
-            int j = 0;
-            int limit = 0;
+            /*
             while (j < 2) { 
 
                 do {
@@ -260,27 +270,7 @@ namespace Ejercicio4
                 Console.WriteLine("i {0}", i);
 
             }
-
-            
-
-            /*
-
-            do
-            {
-                xreal = real.XMin + i * (real.XMax - real.XMin) / numpuntos;
-                yreal = SwitchFunctionFromButton(xreal);
-
-                xpant = ConvertXFromRealToPant(xreal, pant.XMin);
-                ypant = ConvertYFromRealToPant(yreal, pant.YMin);
-
-                Point punto = new Point(xpant, ypant);
-                puntos.Add(punto);
-                i++;
-            } while (xreal < real.XMax);
-
-            polilinea2.Points = new PointCollection(puntos);
-            lienzo.Children.Add(polilinea2);
-            
+            */
             
             for (int i = 0; i <= numpuntos; i++) // OJOOOOOOOOOOOOOO Aqui he cambiado el < por <= para que llegue de -10 a 10 y no de -10 a 9.66 por ejemplo
             {
@@ -302,11 +292,10 @@ namespace Ejercicio4
                 Point punto = new Point(xpant, ypant);
                 puntos.Add(punto);
             }
-            
 
-            polilinea1.Points = new PointCollection(puntos);
-            lienzo.Children.Add(polilinea1);
-            */
+            polilinea.Points = new PointCollection(puntos);
+            lienzo.Children.Add(polilinea);
+            
 
             foreach(PointCollection p in PointCollectionList)
             {
@@ -368,9 +357,9 @@ namespace Ejercicio4
 
         private void DeclareFuncRect()
         {
-            real.XMin = -10;
+            real.XMin = -5;
             real.YMin = -10;
-            real.XMax = 10;
+            real.XMax = 3;
             real.YMax = 10;
 
             pant.XMin = pant.YMin = 0;
